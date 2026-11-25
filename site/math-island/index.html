@@ -295,11 +295,11 @@ function startScreen() {
       <div class="dsp" style="font-size:18px">For parents</div>
       <div class="small">World 1 is <b>Bar Bridge</b>: "times as many", "more than" and three-person questions. Each level needs 6 solved with 4 on the first try. Then a 5-question gate exam with no hints (pass with 4 of 5) proves mastery.</div>
       <div class="small">After each session your child passes the phone back and you get a short report: what they did, how long they took and where they got stuck.</div>
-      <div class="small muted">Progress is saved on this device only. Nothing is sent anywhere.</div>
     </div>
     <label for="nm" class="dsp" style="font-size:18px">Child's first name (optional)</label>
     <input id="nm" maxlength="16" autocomplete="off" value="${esc(S.name)}" placeholder="e.g. Wei Ling" style="height:52px;border:2px solid var(--line);border-radius:14px;padding:0 14px;font:700 18px Nunito,sans-serif;background:#fff">
     <button class="btn" data-a="begin">Start playing</button>
+    <div class="row small" style="gap:6px;color:var(--green2);font-weight:800;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex:none"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Progress saves automatically on this device. Come back anytime to carry on.</div>
     <p class="small muted" style="margin:0">Independent study aid by Edge 4 Exams Singapore. Not affiliated with MOE or SEAB. Every question is original.</p>
   </div>`;
 }
@@ -332,6 +332,7 @@ function mapScreen() {
       <div class="small" style="color:#a9d1cd">${done ? 'Come back tomorrow for your streak, or practise more now' : `${n} of ${SESSION} reps · about 15 minutes`}</div></div>
       <div class="dsp" style="color:var(--gold);font-size:20px">${done ? 'More' : 'Go'}</div>
     </button>
+    <div class="row small" style="gap:6px;color:var(--green2);font-weight:800;margin-top:-4px"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex:none"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Progress saved on this device</div>
     <div class="map" role="group" aria-label="Bar Bridge island">
       <svg style="position:absolute;inset:0" width="100%" height="100%" viewBox="0 0 360 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <ellipse cx="255" cy="70" rx="110" ry="52" fill="#ffe3a3"/><ellipse cx="255" cy="64" rx="96" ry="40" fill="#5cc46b"/>
@@ -483,7 +484,7 @@ function doneScreen() {
   const reps = S.today.reps, first = reps.filter(r => r.first).length;
   const col = { g: 'var(--green)', y: '#f0b429', m: '#c9d3dd' };
   return `<div style="flex:1;background:var(--teal);color:#fff;display:flex;flex-direction:column;padding:22px 16px;gap:14px;padding-top:max(22px,env(safe-area-inset-top))">
-    <div style="text-align:center"><div class="dsp" style="font-size:15px;color:#cfe9e6">Day ${S.streak} streak</div><h1 style="font-size:40px">Training done!</h1><div class="small" style="color:#cfe9e6">${reps.length} reps · ${first} first try · best combo x${S.today.best}</div></div>
+    <div style="text-align:center"><div class="dsp" style="font-size:15px;color:#cfe9e6">Day ${S.streak} streak</div><h1 style="font-size:40px">Training done!</h1><div class="small" style="color:#cfe9e6">${reps.length} reps · ${first} first try · best combo x${S.today.best}</div><div class="row small" style="gap:6px;justify-content:center;margin-top:8px;font-weight:800;color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex:none"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Progress saved. See you tomorrow!</div></div>
     <div class="card" style="color:var(--ink);box-shadow:0 8px 0 var(--teal2)">
       <div class="row"><div class="dsp grow" style="font-size:20px">Math Island</div><b>${first}/${reps.length}</b></div>
       <div class="grid3" style="grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px">${reps.map(r => `<div class="sq" style="background:${col[r.c]}"></div>`).join('')}</div>
