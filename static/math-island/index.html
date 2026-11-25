@@ -145,7 +145,7 @@ a{color:var(--green)}
 <script>
 {
 const KEY = 'mathIsland.v1', SESSION = 10, EGG_COST = 120, SITE = 'https://edge4exams.pages.dev/math-island/';
-const FREE = 'https://edge4examsg.gumroad.com/l/free-psle-math-sample', PACK = 'https://edge4examsg.gumroad.com/l/p6-math-heuristics';
+const FREE = 'https://edge4examsg.gumroad.com/l/free-psle-math-sample', PACK = 'https://edge4examsg.gumroad.com/l/p6-math-heuristics', EARLY = 'https://edge4examsg.gumroad.com/l/math-island-early-access';
 const app = document.getElementById('app');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const ri = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
@@ -345,7 +345,9 @@ function mapScreen() {
     <div class="card">${prog}</div>
     <div class="card row"><div class="grow small"><b>Next egg</b> · ${eggNeed ? `${S.shells}/${EGG_COST} shells` : (S.today.hatched ? 'Ready tomorrow (one egg a day)' : 'Ready! Finish today’s training to hatch it')}</div>
       <div class="meter" style="width:110px"><i style="width:${Math.min(100, S.shells / EGG_COST * 100)}%"></i></div></div>
-    <div class="card"><div class="dsp" style="font-size:17px">More worlds coming</div><div class="small muted" style="margin-top:4px">Supposition Farm · Before–After Tower · Rewind Cave</div></div>
+    <div class="card stack" style="gap:10px;background:#fff7e0"><div><div class="dsp" style="font-size:17px">New worlds are coming</div><div class="small muted" style="margin-top:4px">Supposition Farm · Before–After Tower · Rewind Cave</div></div>
+      <div class="small">Join the early-access list and you'll be the first to play them. Free to join.</div>
+      <a class="btn gold" href="${EARLY}" target="_blank" rel="noopener" style="min-height:48px;font-size:17px">Get early access</a></div>
   </div>` + navBar('map');
 }
 
@@ -491,6 +493,7 @@ function doneScreen() {
       <div class="row small" style="gap:12px;margin-top:12px;flex-wrap:wrap;font-weight:800;color:var(--muted)"><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:var(--green);border-radius:3px"></i>First try</span><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:#f0b429;border-radius:3px"></i>Hint or 1 slip</span><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:#c9d3dd;border-radius:3px"></i>Needed help</span></div>
     </div>
     <button class="btn gold" data-a="share" id="shareBtn">Tap to share</button>
+    <a href="${EARLY}" target="_blank" rel="noopener" style="color:#fff;text-align:center;font-weight:800;font-size:15px">New worlds are coming. Get early access, free →</a>
     <div id="shareFallback"></div>
     <button class="btn" data-a="go" data-v="handoff" style="background:var(--deep);box-shadow:0 5px 0 #021f1f">Next</button>
   </div>`;
