@@ -36,6 +36,7 @@ PAGES = [
                 "The most common mistake for each method",
                 "27 practice questions with a full answer key"],
         products=[("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None)],
+        free=("Free sample: 3 PSLE Math methods with bar models", "free-psle-math-sample", "Not sure yet? Try 3 of the 27 methods first, each with a worked example, bar model and practice question. Free 4-page PDF."),
         faq=[("Are these real PSLE questions?", "No. Every question is original and uses the problem-solving heuristics taught in Singapore primary schools. We never use real or copied exam papers."),
              ("Who is it for?", "P6 students preparing for PSLE Math, and P5 students who are starting on word-problem heuristics."),
              ("How should my child use it?", "One method a day for about four weeks: read the worked example together, cover the solution, let your child redo it alone, then try the practice question."),
@@ -221,6 +222,11 @@ h2{font-size:clamp(22px,3vw,28px);margin:44px 0 6px;letter-spacing:-.01em}
 .price{color:var(--ink);font-weight:700;margin:0 0 12px}
 .btn{display:inline-block;margin-top:auto;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:11px 16px;border-radius:10px;text-align:center}
 .btn:hover{background:var(--accent-dark)}
+.btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn-outline:hover{background:var(--accent);color:var(--accent-ink)}
+.free{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;background:var(--card);border:1px dashed var(--gold);border-left:5px solid var(--gold);border-radius:14px;padding:14px 18px;margin:4px 0 18px}
+.free p{margin:0;max-width:620px}
+.free .btn{margin-top:0}
 .why{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;list-style:none;padding:0;margin:18px 0}
 .why li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:600}
 .why li::before{content:"";display:block;width:28px;height:4px;border-radius:2px;background:var(--gold);margin-bottom:10px}
@@ -299,6 +305,8 @@ def md_page(p):
     L = [f"# {p['h1']}", "", f"Web page: {url}", "", p["intro"], "", "## Packs and prices", ""]
     for name, price, slug, img in p["products"]:
         L.append(f"- **{name}**: {price}, instant PDF. Buy: {g(slug)}")
+    if p.get("free"):
+        L += ["", f"**{p['free'][0]}** (free, S$0+): {p['free'][2]} Download: {g(p['free'][1])}"]
     L += ["", "## What's in the pack", ""] + [f"- {x}" for x in p["inside"]]
     L += ["", f"## {p.get('topics_label', 'Topics covered')}", ""] + [f"- {x}" for x in p["topics"]]
     L += ["", f"## {p.get('faq_label', p['short'] + ' questions people ask')}", ""]
@@ -314,6 +322,7 @@ def llms_txt():
          "Each exam page has a plain Markdown copy (same content as the web page).", "", "## Exam pages", ""]
     for p in PAGES:
         prices = ", ".join(f"{n} {pr}" for n, pr, s, i in p["products"])
+        if p.get("free"): prices += f"; {p['free'][0]} free (S$0+), {g(p['free'][1])}"
         L.append(f"- [{p['title']}]({BASE}/{p['path']}.md): {prices}")
     L += ["", "## Store", "", f"- [Edge 4 Exams on Gumroad]({STORE}/): all packs, instant PDF download",
           f"- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, {g('bank-starter')}", ""]
@@ -342,13 +351,14 @@ def build():
                 f'<p class="note"><a href="/">Edge 4 Exams</a> / {esc(p["short"])}</p>',
                 f'<h1>{esc(p["h1"])}</h1><p class="lead">{esc(p["intro"])}</p>',
                 cards(p["products"]),
+                (f'<div class="free"><p><strong>{esc(p["free"][0])}</strong><br>{esc(p["free"][2])}</p><a class="btn btn-outline" href="{g(p["free"][1])}">Get the free sample</a></div>') if p.get("free") else "",
                 "<h2>What's in the pack</h2><ul>" + "".join(f"<li>{esc(x)}</li>" for x in p["inside"]) + "</ul>",
                 f"<h2>{esc(p.get('topics_label', 'Topics covered'))}</h2><ul>" + "".join(f"<li>{esc(x)}</li>" for x in p["topics"]) + "</ul>",
                 f"<h2>{esc(p.get('faq_label', p['short'] + ' questions people ask'))}</h2>" + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faqs),
                 ("<h2>Other exams</h2><ul>" + "".join(f'<li><a href="/{r}/">{esc(BY[r]["title"])}</a></li>' for r in p["related"]) + "</ul>") if p["related"] else "",
                 f'<p class="note">Plain-text version of this page: <a href="/{p["path"]}.md">{p["path"]}.md</a></p>',
                 FOOT]
-        write(f"{OUT}/{p['path']}/index.html", "\n".join(body))
+        write(f"{OUT}/{p['path']}/index.html", "\n".join(x for x in body if x))
         write(f"{OUT}/{p['path']}.md", md_page(p))
 
     # home

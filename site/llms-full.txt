@@ -6,7 +6,7 @@ Each exam page has a plain Markdown copy (same content as the web page).
 
 ## Exam pages
 
-- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29
+- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29; Free sample: 3 PSLE Math methods with bar models free (S$0+), https://edge4examsg.gumroad.com/l/free-psle-math-sample
 - [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md): CMFAS M8 Complete Pack S$34, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md): CMFAS M8A Complete Pack S$29, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md): CMFAS M9 Complete Pack S$34, CM-LIP Bundle: M9 + M9A S$45
@@ -34,6 +34,8 @@ Most PSLE Math word problems can be solved with one of 27 methods. This pack tea
 ## Packs and prices
 
 - **P6 Math Heuristics Pack: 27 Methods with Bar Models**: S$29, instant PDF. Buy: https://edge4examsg.gumroad.com/l/p6-math-heuristics
+
+**Free sample: 3 PSLE Math methods with bar models** (free, S$0+): Not sure yet? Try 3 of the 27 methods first, each with a worked example, bar model and practice question. Free 4-page PDF. Download: https://edge4examsg.gumroad.com/l/free-psle-math-sample
 
 ## What's in the pack
 
