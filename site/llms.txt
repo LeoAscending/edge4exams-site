@@ -1,11 +1,12 @@
 # Edge 4 Exams Singapore
 
-> Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+> Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 Each exam page has a plain Markdown copy (same content as the web page).
 
 ## Exam pages
 
+- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29
 - [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md): CMFAS M8 Complete Pack S$34, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md): CMFAS M8A Complete Pack S$29, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md): CMFAS M9 Complete Pack S$34, CM-LIP Bundle: M9 + M9A S$45

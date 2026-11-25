@@ -12,13 +12,36 @@ STORE = "https://edge4examsg.gumroad.com"
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "site")
 STATIC = os.path.join(HERE, "static")
-TODAY = "2026-11-22"
+TODAY = "2026-11-25"
 
 def g(slug):
     return f"{STORE}/l/{slug}"
 
 # Each exam page. Only facts already stated in the live listings are used.
 PAGES = [
+    dict(
+        path="psle-math", short="PSLE Math", common_faq=False, topics_label="Methods covered", faq_label="PSLE Math questions parents ask",
+        title="PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models",
+        desc="P6 PSLE Math heuristics pack: 27 problem-solving methods, each with a worked example, bar model diagrams, common mistakes, practice questions and a full answer key. Instant PDF download.",
+        h1="PSLE Math heuristics pack for P6 (27 methods)",
+        intro="Most PSLE Math word problems can be solved with one of 27 methods. This pack teaches each one with a fully worked example and a bar model drawn to the exact numbers, then gives your child a practice question to try alone.",
+        topics=["Models and before-after: part-whole, comparison, constant total, constant difference, constant part",
+                "Fractions, ratio and percentage: equal fractions, remainder concept, repeated identity, equal stage, percentage change",
+                "Number methods: excess and shortage, supposition, grouping, guess and check, working backwards",
+                "Patterns, geometry and speed: systematic listing, patterns, overlapping areas, meeting and catching up, averages",
+                "Advanced PSLE methods: units and parts, percentage transfer, simultaneous concept, number \u00d7 value, supposition with a penalty, work rate, gap and difference"],
+        inside=["27 problem-solving heuristics, each with a fully worked PSLE-style example",
+                "14 bar models and diagrams, drawn to the exact numbers in each question",
+                "\"Spot it when\" clue words, so your child knows which method to use",
+                "The most common mistake for each method",
+                "27 practice questions with a full answer key"],
+        products=[("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None)],
+        faq=[("Are these real PSLE questions?", "No. Every question is original and uses the problem-solving heuristics taught in Singapore primary schools. We never use real or copied exam papers."),
+             ("Who is it for?", "P6 students preparing for PSLE Math, and P5 students who are starting on word-problem heuristics."),
+             ("How should my child use it?", "One method a day for about four weeks: read the worked example together, cover the solution, let your child redo it alone, then try the practice question."),
+             ("How do I get the file?", "Checkout is on Gumroad. You get an instant PDF download you can print or use on a tablet.")],
+        related=[],
+    ),
     dict(
         path="cmfas-m8", short="CMFAS M8",
         title="CMFAS M8 Notes and 50-Question Mock Exam (2026)",
@@ -155,28 +178,62 @@ COMMON_FAQ = [
 ]
 
 CSS = """
-:root{--bg:#f7f8fb;--card:#fff;--ink:#14213d;--muted:#55607a;--accent:#0b6e4f;--accent-ink:#fff;--line:#e3e7ef}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1420;--card:#171e2e;--ink:#e8ecf5;--muted:#a3adc2;--accent:#3ccf91;--accent-ink:#06261a;--line:#273148}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-a{color:var(--accent)}header,main,footer{max-width:960px;margin:0 auto;padding:0 16px}
-header{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:6px}
-.brand{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}.brand span{color:var(--accent)}
-nav a{margin-left:14px;font-size:15px}
-h1{font-size:clamp(26px,4.5vw,38px);line-height:1.2;margin:26px 0 10px}h2{font-size:22px;margin:34px 0 10px}
-.lead{font-size:18px;color:var(--muted);max-width:720px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:18px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column}
-.tile{aspect-ratio:4/3;border-radius:10px;background:linear-gradient(140deg,#0b6e4f,#14532d);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
-.tile small{color:#f5c542;font-weight:700;letter-spacing:.08em}.tile b{font-size:clamp(26px,5vw,36px);line-height:1.1;margin:4px 0}.tile span{font-size:13px;opacity:.85}
-.card h3{font-size:16px;margin:10px 0 4px}.price{color:var(--muted);margin:0 0 10px}
-.btn{display:inline-block;margin-top:auto;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:10px;text-align:center}
-ul{padding-left:20px}details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0}summary{font-weight:700;cursor:pointer}
-.note{font-size:14px;color:var(--muted)}footer{margin-top:48px;padding-bottom:40px;border-top:1px solid var(--line);padding-top:18px}
+:root{--bg:#f6f8f7;--card:#fff;--ink:#0f2a2a;--muted:#4b6363;--line:#dfe8e6;--teal:#0f6e6e;--accent:#0b6e4f;--accent-dark:#14532d;--accent-ink:#fff;--gold:#f5c542;--gold-ink:#1f1a05}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1716;--card:#13201f;--ink:#e6f0ef;--muted:#a3b8b6;--line:#243433;--accent:#3ccf91;--accent-dark:#2aa874;--accent-ink:#06261a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.wrap,main,footer{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px max(20px,calc((100% - 1040px)/2 + 20px))}
+.brand{font-weight:800;font-size:21px;color:#fff;text-decoration:none;letter-spacing:-.01em}
+.brand span{color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#e3f2f2;font-size:15px;font-weight:600;text-decoration:none}
+nav a:hover{color:var(--gold)}
+.hero{background:var(--teal);color:#fff;padding:40px 0 56px}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em;max-width:760px}
+.hero .lead{color:#d6ecec;font-size:clamp(17px,2.2vw,20px);max-width:700px;margin:0 0 22px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0 0 26px}
+.badges li{border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-size:14px;color:#eef8f8}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn{background:var(--gold);color:var(--gold-ink)}
+.hero .btn:hover{background:#ffd75e}
+.hero .btn.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+h1{font-size:clamp(26px,4.5vw,40px);line-height:1.15;margin:28px 0 10px;letter-spacing:-.01em}
+h2{font-size:clamp(22px,3vw,28px);margin:44px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px}
+.lead{font-size:18px;color:var(--muted);max-width:740px}
+.picker{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;margin:18px 0;align-items:start}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.cat h3{margin:0 0 4px;font-size:18px}
+.cat .tag{display:inline-block;background:var(--gold);color:var(--gold-ink);font-size:12px;font-weight:700;letter-spacing:.06em;border-radius:6px;padding:2px 8px;margin-bottom:8px}
+.cat ul{margin:8px 0 0;padding-left:18px}
+.cat li{margin:4px 0}
+.cat.featured{border:2px solid var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(15,110,110,.12)}
+.tile{aspect-ratio:4/3;border-radius:12px;background:linear-gradient(140deg,#0b6e4f,#14532d);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px}
+.tile small{color:var(--gold);font-weight:700;letter-spacing:.08em}
+.tile b{font-size:clamp(26px,5vw,36px);line-height:1.1;margin:4px 0}
+.tile span{font-size:13px;opacity:.88}
+.card h3{font-size:16px;margin:12px 0 4px;line-height:1.35}
+.price{color:var(--ink);font-weight:700;margin:0 0 12px}
+.btn{display:inline-block;margin-top:auto;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:11px 16px;border-radius:10px;text-align:center}
+.btn:hover{background:var(--accent-dark)}
+.why{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;list-style:none;padding:0;margin:18px 0}
+.why li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:600}
+.why li::before{content:"";display:block;width:28px;height:4px;border-radius:2px;background:var(--gold);margin-bottom:10px}
+ul{padding-left:20px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0}
+summary{font-weight:700;cursor:pointer}
+.note{font-size:14px;color:var(--muted)}
+footer{margin-top:56px;padding-bottom:40px;border-top:1px solid var(--line);padding-top:20px}
 """
 
 def esc(s): return html.escape(s, quote=True)
 
-def head(title, desc, canonical, jsonld, md=None):
+def head(title, desc, canonical, jsonld, md=None, hero=""):
     alt = f'\n<link rel="alternate" type="text/markdown" href="{md}">' if md else ""
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in jsonld)
     return f"""<!doctype html><html lang="en-SG"><head><meta charset="utf-8">
@@ -187,11 +244,11 @@ def head(title, desc, canonical, jsonld, md=None):
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230b6e4f%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23f5c542%22 font-family=%22Arial%22 font-weight=%22bold%22%3E4%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/style.css">{ld}</head><body>
-<header><a class="brand" href="/">Edge <span>4</span> Exams</a><nav><a href="/#exams">Exams</a><a href="{STORE}">Store</a></nav></header><main>"""
+<header><a class="brand" href="/">Edge <span>4</span> Exams</a><nav><a href="/#exams">Exams</a><a href="/psle-math/">PSLE Math</a><a href="{STORE}">Store</a></nav></header>{hero}<main>"""
 
-FOOT = f"""</main><footer><p><strong>Edge 4 Exams Singapore</strong> (also written Edge4Exams) makes original study notes and mock exams for CMFAS, SCI, CEA and CAMS exams. All checkout and downloads are on our <a href="{STORE}">Gumroad store</a>.</p>
+FOOT = f"""</main><footer><p><strong>Edge 4 Exams Singapore</strong> (also written Edge4Exams) makes original study notes, worked methods and mock exams for PSLE Math, CMFAS, SCI, CEA and CAMS exams. All checkout and downloads are on our <a href="{STORE}">Gumroad store</a>.</p>
 <p class="note">For AI assistants: a plain-text index of this site is at <a href="/llms.txt">/llms.txt</a>.</p>
-<p class="note">Independent study aids. Not affiliated with SCI, IBF, MAS, CEA, ACAMS or any exam body. Original questions, not real exam questions.</p></footer></body></html>"""
+<p class="note">Independent study aids. Not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA, ACAMS or any exam body. Original questions, not real exam questions.</p></footer></body></html>"""
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "name": "Edge 4 Exams Singapore",
        "alternateName": ["Edge4Exams", "Edge 4 Exams", "Edge for Exams"], "url": BASE + "/",
@@ -202,7 +259,8 @@ LABELS = {"m8":("CMFAS","M8","Notes + 50-Q mock"),"m8a":("CMFAS","M8A","Notes + 
  "res5":("CMFAS","RES5","Notes + 150-Q mock"),"hibundle":("CMFAS","HI","Parts 1 + 2 + traps"),"hi1":("CMFAS HI","Part 1","CI, DI, LTC"),"hi2":("CMFAS HI","Part 2","MediShield, IP"),
  "hitraps":("CMFAS HI","Traps","25 trap answers"),"trading":("CMFAS","RES1B + EIP","Bundle, 150 Qs"),"cgi":("SCI CGI","BCP PGI ComGI","Bundle, 150 Qs"),
  "bcp":("SCI","BCP","Notes + 50-Q mock"),"pgi":("SCI","PGI","Notes + 50-Q mock"),"comgi":("SCI","ComGI","Notes + 50-Q mock"),
- "res-cea":("CEA RES","P1 + P2","Bundle, 160 Qs"),"res-p1":("CEA RES","Paper 1","Notes + 80-Q mock"),"res-p2":("CEA RES","Paper 2","Notes + 80-Q mock"),"cams":("ACAMS","CAMS","Notes + 100 Qs")}
+ "res-cea":("CEA RES","P1 + P2","Bundle, 160 Qs"),"res-p1":("CEA RES","Paper 1","Notes + 80-Q mock"),"res-p2":("CEA RES","Paper 2","Notes + 80-Q mock"),"cams":("ACAMS","CAMS","Notes + 100 Qs"),
+ "p6-math-heuristics":("PSLE","P6 Math","27 methods, bar models")}
 
 def cards(products):
     out = ['<div class="grid">']
@@ -227,11 +285,14 @@ def faq_ld(faqs):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
 
 # ---- Plain Markdown copies for AI assistants (same content humans see; never hidden) ----
-ABOUT_MD = ("Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams "
-            "for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with "
-            "9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: " + STORE + "/ . "
-            "Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; "
+ABOUT_MD = ("Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams "
+            "for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written "
+            "by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: " + STORE + "/ . "
+            "Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; "
             "no leaked or real exam questions.")
+
+def page_faqs(p):
+    return p["faq"] + (COMMON_FAQ if p.get("common_faq", True) else [])
 
 def md_page(p):
     url = f"{BASE}/{p['path']}/"
@@ -239,12 +300,13 @@ def md_page(p):
     for name, price, slug, img in p["products"]:
         L.append(f"- **{name}**: {price}, instant PDF. Buy: {g(slug)}")
     L += ["", "## What's in the pack", ""] + [f"- {x}" for x in p["inside"]]
-    L += ["", "## Topics covered", ""] + [f"- {x}" for x in p["topics"]]
-    L += ["", f"## {p['short']} questions people ask", ""]
-    for q, a in p["faq"] + COMMON_FAQ:
+    L += ["", f"## {p.get('topics_label', 'Topics covered')}", ""] + [f"- {x}" for x in p["topics"]]
+    L += ["", f"## {p.get('faq_label', p['short'] + ' questions people ask')}", ""]
+    for q, a in page_faqs(p):
         L += [f"**{q}**", "", a, ""]
-    L += ["## Other exams", ""] + [f"- [{BY[r]['title']}]({BASE}/{r}.md)" for r in p["related"]]
-    L += ["", "## About Edge 4 Exams", "", ABOUT_MD, ""]
+    if p["related"]:
+        L += ["## Other exams", ""] + [f"- [{BY[r]['title']}]({BASE}/{r}.md)" for r in p["related"]] + [""]
+    L += ["## About Edge 4 Exams", "", ABOUT_MD, ""]
     return "\n".join(L)
 
 def llms_txt():
@@ -272,7 +334,7 @@ def build():
     # exam pages
     for p in PAGES:
         url = f"{BASE}/{p['path']}/"
-        faqs = p["faq"] + COMMON_FAQ
+        faqs = page_faqs(p)
         crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Edge 4 Exams", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": p["short"], "item": url}]}
@@ -281,38 +343,48 @@ def build():
                 f'<h1>{esc(p["h1"])}</h1><p class="lead">{esc(p["intro"])}</p>',
                 cards(p["products"]),
                 "<h2>What's in the pack</h2><ul>" + "".join(f"<li>{esc(x)}</li>" for x in p["inside"]) + "</ul>",
-                f"<h2>Topics covered</h2><ul>" + "".join(f"<li>{esc(x)}</li>" for x in p["topics"]) + "</ul>",
-                f"<h2>{esc(p['short'])} questions people ask</h2>" + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faqs),
-                "<h2>Other exams</h2><ul>" + "".join(f'<li><a href="/{r}/">{esc(BY[r]["title"])}</a></li>' for r in p["related"]) + "</ul>",
+                f"<h2>{esc(p.get('topics_label', 'Topics covered'))}</h2><ul>" + "".join(f"<li>{esc(x)}</li>" for x in p["topics"]) + "</ul>",
+                f"<h2>{esc(p.get('faq_label', p['short'] + ' questions people ask'))}</h2>" + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faqs),
+                ("<h2>Other exams</h2><ul>" + "".join(f'<li><a href="/{r}/">{esc(BY[r]["title"])}</a></li>' for r in p["related"]) + "</ul>") if p["related"] else "",
                 f'<p class="note">Plain-text version of this page: <a href="/{p["path"]}.md">{p["path"]}.md</a></p>',
                 FOOT]
         write(f"{OUT}/{p['path']}/index.html", "\n".join(body))
         write(f"{OUT}/{p['path']}.md", md_page(p))
 
     # home
-    groups = [("CMFAS insurance and financial advisory", ["cmfas-m8", "cmfas-m8a", "cmfas-m9", "cmfas-m9a", "cmfas-res5", "cmfas-hi"]),
+    groups = [("PSLE Math (Primary 6)", ["psle-math"]),
+              ("CMFAS insurance and financial advisory", ["cmfas-m8", "cmfas-m8a", "cmfas-m9", "cmfas-m9a", "cmfas-res5", "cmfas-hi"]),
               ("CMFAS trading licence", ["cmfas-res1b-cm-eip"]),
               ("SCI general insurance", ["sci-cgi"]),
               ("Property and compliance", ["cea-res-exam", "cams-exam"])]
-    home_desc = "Edge 4 Exams Singapore: original study notes and mock exams for CMFAS (M8, M8A, M9, M9A, RES5, HI, RES1B, CM-EIP), SCI BCP, PGI and ComGI, the CEA RES exam and CAMS. Instant PDF download."
+    home_desc = "Edge 4 Exams Singapore: exam-focused notes, worked methods and original practice questions. PSLE Math (P6 heuristics with bar models), CMFAS (M8, M8A, M9, M9A, RES5, HI, RES1B, CM-EIP), SCI BCP, PGI and ComGI, the CEA RES exam and CAMS. Instant PDF download."
     site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "Edge 4 Exams Singapore", "alternateName": "Edge4Exams", "url": BASE + "/"}
-    body = [head("Edge 4 Exams Singapore | CMFAS, SCI and CEA Exam Notes and Mock Exams", home_desc, BASE + "/", [ORG, site_ld]),
-            '<h1>Edge 4 Exams Singapore</h1>',
-            '<p class="lead">No time to read the whole study text? Edge 4 Exams makes short, exam-focused notes and full-length original mock exams for Singapore licensing exams, written by a former financial adviser with 9 years in the industry.</p>',
-            f'<p><a class="btn" href="{STORE}">Visit the Edge 4 Exams store on Gumroad</a></p>',
-            '<h2 id="exams">Choose your exam</h2>']
-    for gname, paths in groups:
-        body.append(f"<h3>{esc(gname)}</h3><ul>")
+    hero = ('<section class="hero"><div class="wrap">'
+            '<h1>Pass your exam with less reading</h1>'
+            '<p class="lead">Short, exam-focused notes, worked methods and original practice questions for Singapore exams, from PSLE Math to CMFAS, SCI, CEA and CAMS.</p>'
+            '<ul class="badges"><li>Original questions only</li><li>Every answer explained</li><li>Instant PDF download</li><li>Licensing packs by a former financial adviser (9 years)</li></ul>'
+            f'<div class="cta"><a class="btn" href="#exams">Choose your exam</a><a class="btn btn-ghost" href="{STORE}">Visit the store</a></div>'
+            '</div></section>')
+    body = [head("Edge 4 Exams Singapore | PSLE Math, CMFAS, SCI and CEA Exam Notes and Mock Exams", home_desc, BASE + "/", [ORG, site_ld], hero=hero),
+            '<h2 id="exams">Choose your exam</h2>',
+            '<p class="sub">Pick your paper to see what\'s inside each pack.</p>',
+            '<div class="picker">']
+    for i, (gname, paths) in enumerate(groups):
+        featured = i == 0
+        body.append(f'<div class="cat{" featured" if featured else ""}">' + ('<span class="tag">NEW</span>' if featured else "") + f"<h3>{esc(gname)}</h3><ul>")
         for path in paths:
             p = BY[path]; body.append(f'<li><a href="/{path}/">{esc(p["title"])}</a></li>')
-        body.append("</ul>")
+        body.append("</ul></div>")
+    body.append("</div>")
     body.append("<h2>Popular packs</h2>")
-    body.append(cards([("Bank Starter Pack: RES5, M8, M8A, M9, M9A, HI", "S$99", "bank-starter", "six-exam-bundle-thumb.png"),
+    body.append('<p class="sub">Checkout and instant download on Gumroad.</p>')
+    body.append(cards([("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None),
+                       ("Bank Starter Pack: RES5, M8, M8A, M9, M9A, HI", "S$99", "bank-starter", "six-exam-bundle-thumb.png"),
                        ("CGI Complete Bundle: BCP + PGI + ComGI", "S$59", "cgi", "cgi-bundle-thumb.png"),
                        ("CEA RES Complete Bundle: Paper 1 + 2", "S$49", "res-cea", "cea-bundle-thumb.png"),
                        ("CM-LIP Bundle: M9 + M9A", "S$45", "cmlip", "cmlip-bundle-thumb-v2.png"),
                        ("CMFAS RES5 Exam Notes and Mock", "S$39", "res5", "res5-thumb.png")]))
-    body.append("<h2>Why Edge 4 Exams</h2><ul><li>Notes cut down to what examiners actually test</li><li>Trap lists of the wrong answers that look right</li><li>Full-length mock exams in the real format, every answer explained</li><li>Original questions only, never leaked exam content</li></ul>")
+    body.append('<h2>Why Edge 4 Exams</h2><ul class="why"><li>Notes cut down to what examiners actually test</li><li>Trap lists of the wrong answers that look right</li><li>Full-length mock exams in the real format, every answer explained</li><li>PSLE methods drawn as bar models and diagrams</li><li>Original questions only, never leaked exam content</li></ul>')
     body.append(FOOT)
     write(OUT + "/index.html", "\n".join(body))
 
