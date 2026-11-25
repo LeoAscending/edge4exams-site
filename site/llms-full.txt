@@ -56,6 +56,10 @@ Most PSLE Math word problems can be solved with one of 27 methods. This pack tea
 
 I'm a parent, not a teacher. I noticed you can get through every exam by spotting which method a question needs. This pack teaches your child to do the same. Each method comes with the clue words that tell you when to use it, so they're never staring at a question with no idea where to start.
 
+## How it works
+
+At first, every word problem feels new, and kids freeze. With practice, they start to recognise the type of question, and the right method comes to mind on its own, like an experienced driver who no longer thinks about changing gears. That's what this pack trains: spot the clue words, pick the method, and know the one mistake to avoid.
+
 ## Methods covered
 
 - Models and before-after: part-whole, comparison, constant total, constant difference, constant part
