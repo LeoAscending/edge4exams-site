@@ -385,12 +385,14 @@ def foot(psle=False):
 <div><h4>Edge 4 Exams · PSLE</h4><p class="note">Clear, worked methods for PSLE Math, drawn as bar models and diagrams. Checkout and instant PDF download on Gumroad.</p></div>
 <div><h4>PSLE</h4><ul><li><a href="/psle-math/">PSLE Math heuristics (P6)</a></li><li><a href="{g('p6-math-heuristics')}">Buy the pack</a></li></ul></div>
 <div><h4>More</h4><ul><li><a href="/">Edge 4 Exams home</a></li><li><a href="/llms.txt">Plain-text index (llms.txt)</a></li></ul></div></div>
+<p class="note">Questions? Email <a href="mailto:edge4exams@proton.me">edge4exams@proton.me</a></p>
 <p class="note">Independent study aid. Not affiliated with MOE or SEAB. Original questions, not real exam questions.</p></div></footer></body></html>"""
     exam_links = "".join(f'<li><a href="/{p}/">{esc(BY[p]["short"])}</a></li>' for _, ps in PRO_GROUPS for p in ps)
     return f"""</main><footer class="site-foot"><div class="wrap"><div class="fcols">
 <div><h4>Edge 4 Exams Singapore</h4><p class="note"><strong>Edge 4 Exams</strong> (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams. Written by a former financial adviser with 9 years in the industry. Checkout and downloads are on our <a href="{STORE}">Gumroad store</a>.</p></div>
 <div><h4>Exams</h4><ul>{exam_links}</ul></div>
 <div><h4>More</h4><ul><li><a href="{STORE}">Store</a></li><li><a href="/llms.txt">Plain-text index (llms.txt)</a></li><li><a href="/psle-math/">Primary school: PSLE Math</a></li></ul></div></div>
+<p class="note">Questions? Email <a href="mailto:edge4exams@proton.me">edge4exams@proton.me</a></p>
 <p class="note">Independent study aids. Not affiliated with SCI, IBF, MAS, CEA, ACAMS or any exam body. Original questions, not real exam questions.</p></div></footer></body></html>"""
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "name": "Edge 4 Exams Singapore",
@@ -483,7 +485,7 @@ def llms_txt():
         prices = ", ".join(f"{n} {pr}" for n, pr, s, i in p["products"])
         if p.get("free"): prices += f"; {p['free'][0]} free (S$0+), {g(p['free'][1])}"
         L.append(f"- [{p['title']}]({BASE}/{p['path']}.md): {prices}")
-    L += ["", "## Store", "", f"- [Edge 4 Exams on Gumroad]({STORE}/): all packs, instant PDF download", ""]
+    L += ["", "## Store", "", f"- [Edge 4 Exams on Gumroad]({STORE}/): all packs, instant PDF download", "- Contact: edge4exams@proton.me", ""]
     return "\n".join(L)
 
 def write(path, text):
