@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Math Island: free daily PSLE problem-sum game | Edge 4 Exams</title>
+<meta name="description" content="Math Island is a free 15-minute daily game that trains PSLE Math bar models. Build the model, find 1 unit, answer, hatch island pals. Original questions, plays in the browser, no sign-up.">
+<link rel="canonical" href="https://edge4exams.pages.dev/math-island/">
+<link rel="alternate" type="text/markdown" href="/math-island.md">
+<meta property="og:title" content="Math Island: free daily PSLE problem-sum game">
+<meta property="og:description" content="15 minutes a day of bar-model training for P5 and P6. Free, in the browser.">
+<meta property="og:url" content="https://edge4exams.pages.dev/math-island/">
+<meta property="og:image" content="https://edge4exams.pages.dev/img/og-psle.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">
+<meta name="theme-color" content="#0f6e6e">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0f6e6e;--teal2:#0b5a5a;--deep:#073f3f;--green:#0b6e4f;--green2:#14532d;--gold:#f5c542;--gold2:#c99a1a;--cream:#fbf6e9;--sand:#f3e6c4;--ink:#0f2a2a;--muted:#4b6363;--line:#e3dccb;--orange:#f08a24;--red:#c4413a;--blue:#6cb8ff;--pink:#ff8fc8;--myth:#ff5a5f;color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;height:100%}
+body{background:var(--deep);color:var(--ink);font:16px/1.5 Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+#app{max-width:480px;margin:0 auto;min-height:100%;min-height:100dvh;background:var(--cream);position:relative;overflow-x:clip;display:flex;flex-direction:column}
+h1,h2,h3,.dsp{font-family:"Baloo 2",Nunito,sans-serif;font-weight:800;line-height:1.1;margin:0}
+button{font:inherit;cursor:pointer;color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+a{color:var(--green)}
+.pad{padding:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border:0;border-radius:18px;background:var(--green);color:#fff;font:800 19px "Baloo 2",sans-serif;box-shadow:0 5px 0 var(--green2);text-decoration:none;padding:0 18px;width:100%}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--green2)}
+.btn.gold{background:var(--gold);color:#3a2c00;box-shadow:0 5px 0 var(--gold2)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--line)}
+.btn.dark{background:var(--deep);box-shadow:0 5px 0 #021f1f}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.card{background:#fff;border-radius:20px;padding:14px 16px;box-shadow:0 2px 0 var(--line)}
+.top{background:var(--teal);color:#fff;padding:14px 16px 12px;padding-top:max(14px,env(safe-area-inset-top))}
+.row{display:flex;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.22);color:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:15px;white-space:nowrap}
+.icon-btn{width:44px;height:44px;border-radius:14px;border:0;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex:none}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.grow{flex:1}
+.stack{display:flex;flex-direction:column;gap:12px}
+.fb{border-radius:16px;padding:12px 14px;font-weight:800;font-size:15px;line-height:1.35;min-height:52px;display:flex;align-items:center}
+.fb.info{background:#e6f2f1;color:var(--teal2)}
+.fb.good{background:var(--teal);color:#fff}
+.fb.bad{background:#fde8e4;color:#8a2b22}
+.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.choice{min-height:60px;border:0;border-radius:16px;background:#fff;box-shadow:0 4px 0 var(--line);font:800 24px "Baloo 2",sans-serif}
+.choice:active{transform:translateY(2px);box-shadow:0 2px 0 var(--line)}
+.choice.no{background:#f4f1ea;color:#a39a87;box-shadow:none}
+.person{border-top:1px dashed var(--line);padding-top:10px}
+.person:first-child{border-top:0;padding-top:0}
+.bar{display:flex;gap:3px;margin-top:6px;min-height:36px;flex-wrap:wrap}
+.u{width:34px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}
+.x{min-width:52px;height:36px;border-radius:8px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;padding:0 6px}
+.ctl{display:flex;gap:6px;margin-left:auto}
+.ctl button{min-width:44px;height:44px;border:0;border-radius:12px;background:#eef5f4;font:800 20px Nunito,sans-serif;color:var(--teal2);padding:0 10px}
+.ctl button.on{background:var(--orange);color:#fff}
+.ctl button.xt{font-size:13px}
+.total{margin-top:10px;border-top:3px solid var(--ink);padding-top:6px;font-weight:800;font-size:14px}
+.reps{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;margin-top:10px}
+.reps i{height:8px;border-radius:99px;background:rgba(255,255,255,.3)}
+.combo{background:var(--deep);border-radius:14px;padding:6px 10px;text-align:center;line-height:1;flex:none}
+.combo b{font:800 20px "Baloo 2",sans-serif;color:var(--gold);display:block}
+.combo span{font-size:10px;font-weight:800}
+.prob{font-size:17px;line-height:1.5}
+.tag{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px}
+.modal{position:fixed;inset:0;background:rgba(4,30,30,.6);display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.modal .sheet{background:#fff;width:100%;max-width:480px;border-radius:24px 24px 0 0;padding:20px 16px;padding-bottom:max(20px,env(safe-area-inset-bottom))}
+.nav{position:sticky;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);margin-top:auto}
+.nav button{border:0;background:transparent;min-height:58px;font-weight:800;font-size:13px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.nav button.on{color:var(--teal)}
+.map{position:relative;height:330px;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#2a8fd6,#1b6fb0)}
+.node{position:absolute;width:118px;text-align:center;border:0;background:transparent;padding:0}
+.node .disc{width:66px;height:66px;margin:0 auto;border-radius:20px;border:4px solid #fff;display:flex;align-items:center;justify-content:center;font:800 24px "Baloo 2",sans-serif}
+.node .lbl{margin-top:4px;font:800 14px/1.1 "Baloo 2",sans-serif;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.node.cur .disc{background:#fff;color:var(--teal);box-shadow:0 0 0 8px rgba(255,255,255,.35);animation:bob 1.6s ease-in-out infinite}
+.node.done .disc{background:var(--gold);color:#3a2c00}
+.node.lock .disc{background:#cfd8d3;color:#5d6e66}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.meter{height:10px;border-radius:99px;background:#e9e3d3;overflow:hidden}
+.meter i{display:block;height:100%;border-radius:99px;background:var(--gold)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.pal{border-radius:18px;border:3px solid #e3e8ee;background:#fff;padding:6px 4px 8px;text-align:center}
+.pal b{display:block;font:800 14px/1.1 "Baloo 2",sans-serif}
+.pal span{font-size:11px;font-weight:800}
+.keypad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.keypad button{height:52px;border:0;border-radius:14px;background:#1e5a5a;color:#fff;font:800 22px "Baloo 2",sans-serif}
+.keypad button.ok{background:var(--gold);color:#3a2c00}
+.keypad button.cl{background:#0b3a3a;color:#a9d1cd;font-size:16px}
+.sq{aspect-ratio:1;border-radius:10px}
+.hold{position:relative;overflow:hidden}
+.hold i{position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(255,255,255,.25)}
+.hold.go i{width:100%;transition:width 1.2s linear}
+/* hatch */
+.hatch{flex:1;background:radial-gradient(circle at 50% 42%,#1f6b6b 0%,#062e2e 65%);color:#fff;display:flex;flex-direction:column;padding:16px;gap:10px;position:relative;overflow:hidden}
+.eggbtn{position:relative;border:0;background:transparent;padding:0;width:100%;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;touch-action:manipulation}
+.glow{position:absolute;top:50px;width:220px;height:220px;border-radius:50%;filter:blur(26px);opacity:.5;animation:pulse 1.4s ease-in-out infinite;transition:background .4s,width .3s,height .3s}
+.egg{position:relative;transform-origin:50% 90%}
+.wob{animation:wob 1s ease-in-out infinite}
+.bA{animation:bA .18s ease-out}.bB{animation:bB .18s ease-out}
+.hlabel{position:relative;min-height:60px;max-width:300px;text-align:center;font:800 24px/1.15 "Baloo 2",sans-serif;text-wrap:balance;transition:color .3s}
+@keyframes wob{0%,100%{transform:rotate(0)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes bA{40%{transform:scale(.9,1.08) rotate(-6deg)}}
+@keyframes bB{40%{transform:scale(.9,1.08) rotate(6deg)}}
+@keyframes pulse{0%,100%{opacity:.3;transform:scale(.92)}50%{opacity:.65;transform:scale(1.08)}}
+@keyframes grow{70%{transform:scale(1.18) rotate(-3deg)}100%{transform:scale(1.3)}}
+@keyframes lid{0%,60%{transform:none}100%{transform:translateY(-130px) rotate(-25deg);opacity:0}}
+@keyframes flash{0%,70%{opacity:0}85%{opacity:1}100%{opacity:0}}
+@keyframes tierC{to{background:#ffffff}}
+@keyframes tierR{0%{background:#fff}100%{background:#6cb8ff}}
+@keyframes tierE{0%{background:#fff}50%{background:#6cb8ff}100%{background:#ff8fc8}}
+@keyframes tierL{0%{background:#fff}33%{background:#6cb8ff}66%{background:#ff8fc8}100%{background:#f5c542}}
+@keyframes tierM{0%{background:#fff}20%{background:#6cb8ff}40%{background:#ff8fc8}60%{background:#f5c542}80%{background:#fff}100%{background:#ff5a5f}}
+@keyframes pop{0%{transform:scale(.2);opacity:0}60%{transform:scale(1.1);opacity:1}100%{transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rise{0%{transform:translateY(20px);opacity:0}30%{opacity:1}100%{transform:translateY(-150px);opacity:0}}
+.opening .glow{animation:none;opacity:.9;width:260px;height:260px}
+.opening .egg{animation:grow var(--dur) ease-in forwards}
+.opening .lid{animation:lid var(--dur) ease-in forwards;transform-origin:50% 100%}
+.flash{position:absolute;inset:0;background:#fff;pointer-events:none;opacity:0}
+.opening .flash{animation:flash var(--dur) linear forwards}
+.reveal{animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.rays{position:absolute;animation:spin 10s linear infinite}
+.spark{position:absolute;border-radius:50%;animation:rise 2.4s ease-out infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="top"><div class="row"><img src="/img/logo-64.png" alt="" width="34" height="34"><div class="dsp" style="font-size:18px">Edge 4 Exams · PSLE</div></div></div>
+  <div class="pad stack">
+    <h1 style="font-size:40px;color:var(--teal)">Math Island</h1>
+    <p style="margin:0;font-size:17px">A free game that trains PSLE Math problem sums in 15 minutes a day. Your child builds the bar model, finds 1 unit, then answers. Every correct, quick answer earns shells, and shells hatch island pals.</p>
+    <p style="margin:0" class="muted">World 1 is Bar Bridge: "times as many", "more than" and three-person questions. Pass the gate exam to show mastery. A short report for parents comes after every session.</p>
+    <noscript><p><b>Math Island needs JavaScript to play.</b> Please turn it on in your browser.</p></noscript>
+    <p class="small muted" style="margin:0">Independent study aid by Edge 4 Exams Singapore. Not affiliated with MOE or SEAB. Every question is original.</p>
+  </div>
+</div>
+<script>
+{
+const KEY = 'mathIsland.v1', SESSION = 10, EGG_COST = 120, SITE = 'https://edge4exams.pages.dev/math-island/';
+const FREE = 'https://edge4examsg.gumroad.com/l/free-psle-math-sample', PACK = 'https://edge4examsg.gumroad.com/l/p6-math-heuristics';
+const app = document.getElementById('app');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const ri = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const dayStr = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const today = () => dayStr(new Date());
+const yday = () => { const d = new Date(); d.setDate(d.getDate() - 1); return dayStr(d); };
+const now = () => performance.now();
+const buzz = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} };
+
+/* ---------- state ---------- */
+const newDay = () => ({ day: today(), reps: [], hatched: false, done: false, best: 0 });
+const fresh = () => ({ v: 1, name: '', started: false, shells: 0, streak: 0, lastDay: null, today: newDay(),
+  levels: [{ s: 0, f: 0 }, { s: 0, f: 0 }, { s: 0, f: 0 }], gate: { passed: false, cool: 0, tries: 0 },
+  pals: {}, avatar: null, eggs: 0, since: 0, weak: null, total: 0 });
+let S;
+function load() {
+  try { const r = localStorage.getItem(KEY); S = r ? Object.assign(fresh(), JSON.parse(r)) : fresh(); } catch (e) { S = fresh(); }
+  if (!S.today || S.today.day !== today()) S.today = newDay();
+  if (S.lastDay && S.lastDay !== today() && S.lastDay !== yday()) S.streak = 0;
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+const LEVELS = ['Times as many', 'More than', 'Three people'];
+const NEED_S = 6, NEED_F = 4;
+const mastered = i => S.levels[i].s >= NEED_S && S.levels[i].f >= NEED_F;
+const curLevel = () => { for (let i = 0; i < 3; i++) if (!mastered(i)) return i; return 2; };
+const gateReady = () => mastered(0) && mastered(1) && mastered(2);
+
+/* ---------- puzzles ---------- */
+const NAMES = ['Ali', 'Ben', 'Mei', 'Siti', 'Raj', 'Hui Min', 'Arjun', 'Farah', 'Jun Jie', 'Priya', 'Daniel', 'Aisyah', 'Kai', 'Nur', 'Ethan', 'Wen Xin'];
+const ITEMS = ['stickers', 'marbles', 'stamps', 'beads', 'cards', 'erasers', 'sweets', 'seashells'];
+const COLS = ['#0f6e6e', '#c99a1a', '#0b6e4f'];
+const KIND = { 'times-total': '"times as many" with a total', 'times-diff': '"times as many" with a difference', 'more-total': '"more than" questions', 'three-total': 'three-person questions' };
+function opts(ans, cands) {
+  const set = new Set([ans]);
+  for (const c of cands) { if (set.size >= 3) break; if (Number.isInteger(c) && c > 0 && !set.has(c)) set.add(c); }
+  let k = 1; while (set.size < 3) { const c = ans + (k % 2 ? 1 : -1) * (Math.ceil(k / 2) * ri(1, 4)); if (c > 0) set.add(c); k++; }
+  return shuffle([...set]);
+}
+function gen(lvl) {
+  const [a, b, c] = shuffle(NAMES), it = pick(ITEMS);
+  if (lvl === 0) {
+    const k = ri(2, 5), u = ri(4, 24), askA = Math.random() < .5, kind = pick(['times-total', 'times-diff']);
+    const people = [{ n: a, u: k, x: 0 }, { n: b, u: 1, x: 0 }], ask = askA ? 0 : 1, ans = askA ? k * u : u;
+    if (kind === 'times-total') {
+      const T = (k + 1) * u;
+      return { lvl, kind, it, people, ask, d: 0,
+        text: `<b>${a}</b> has <b>${k} times</b> as many ${it} as <b>${b}</b>. They have <b>${T}</b> ${it} altogether. How many ${it} does <b>${askA ? a : b}</b> have?`,
+        sum: `${k + 1} units = ${T}`, unit: u, uOpts: opts(u, [T / k, T / (k - 1), T - k, u + k]),
+        ans, aOpts: opts(ans, [askA ? u : k * u, T, ans + u]),
+        why: `${k} units + 1 unit = ${k + 1} units. ${k + 1} units = ${T}, so 1 unit = ${T} ÷ ${k + 1} = ${u}.` };
+    }
+    const D = (k - 1) * u;
+    return { lvl, kind, it, people, ask, d: 0,
+      text: `<b>${a}</b> has <b>${k} times</b> as many ${it} as <b>${b}</b>. <b>${a}</b> has <b>${D} more</b> ${it} than <b>${b}</b>. How many ${it} does <b>${askA ? a : b}</b> have?`,
+      sum: `${k} units − 1 unit = ${k - 1} unit${k > 2 ? 's' : ''} = ${D}`, unit: u, uOpts: opts(u, [D / k, D / (k + 1), D, u + 2]),
+      ans, aOpts: opts(ans, [askA ? u : k * u, D, D + 2 * u]),
+      why: `The difference is ${k} units − 1 unit = ${k - 1} unit${k > 2 ? 's' : ''}. ${k - 1} unit${k > 2 ? 's' : ''} = ${D}, so 1 unit = ${D} ÷ ${k - 1} = ${u}.` };
+  }
+  if (lvl === 1) {
+    const u = ri(8, 40), d = ri(3, 30), T = 2 * u + d, askA = Math.random() < .5, ans = askA ? u + d : u;
+    return { lvl, kind: 'more-total', it, people: [{ n: a, u: 1, x: d }, { n: b, u: 1, x: 0 }], ask: askA ? 0 : 1, d,
+      text: `<b>${a}</b> has <b>${d} more</b> ${it} than <b>${b}</b>. They have <b>${T}</b> ${it} altogether. How many ${it} does <b>${askA ? a : b}</b> have?`,
+      sum: `${T} − ${d} = ${T - d} = 2 units`, unit: u, uOpts: opts(u, [(T + d) / 2, T / 2, T - d, u + d]),
+      ans, aOpts: opts(ans, [askA ? u : u + d, T - d, 2 * u]),
+      why: `Take away the extra ${d}: ${T} − ${d} = ${T - d}. That is 2 equal units, so 1 unit = ${T - d} ÷ 2 = ${u}.` };
+  }
+  const k1 = ri(2, 4), k2 = ri(2, 4), u = ri(3, 15), n = k1 + 1 + k2, T = n * u, idx = ri(0, 2);
+  const vals = [k1 * u, u, k2 * u], who = [a, b, c][idx];
+  return { lvl, kind: 'three-total', it, people: [{ n: a, u: k1, x: 0 }, { n: b, u: 1, x: 0 }, { n: c, u: k2, x: 0 }], ask: idx, d: 0,
+    text: `<b>${a}</b> has <b>${k1} times</b> as many ${it} as <b>${b}</b>. <b>${c}</b> has <b>${k2} times</b> as many ${it} as <b>${b}</b>. Altogether they have <b>${T}</b> ${it}. How many ${it} does <b>${who}</b> have?`,
+    sum: `${k1} + 1 + ${k2} = ${n} units = ${T}`, unit: u, uOpts: opts(u, [T / (k1 + k2), T / 3, T / (n + 1), 2 * u]),
+    ans: vals[idx], aOpts: opts(vals[idx], vals.filter((v, i) => i !== idx).concat([T])),
+    why: `${k1} units + 1 unit + ${k2} units = ${n} units. ${n} units = ${T}, so 1 unit = ${T} ÷ ${n} = ${u}.` };
+}
+
+/* ---------- pals ---------- */
+const PALS = [
+  { id: 'kingfisher', n: 'Kingfisher', r: 'common', b: '#1f8fd6', y: '#ff9f5a', e: 0, k: 7 },
+  { id: 'turtle', n: 'Turtle', r: 'common', b: '#4f9a5b', y: '#cfe8b8', e: 3, k: 0 },
+  { id: 'macaque', n: 'Macaque', r: 'common', b: '#9b8466', y: '#e9d3b5', e: 5, k: 0 },
+  { id: 'sparrow', n: 'Sparrow', r: 'common', b: '#8a6a4a', y: '#e8d8c0', e: 0, k: 5 },
+  { id: 'gecko', n: 'Gecko', r: 'common', b: '#7cb342', y: '#dcedc8', e: 2, k: 0 },
+  { id: 'squirrel', n: 'Squirrel', r: 'common', b: '#a1683a', y: '#f1d2b0', e: 6, k: 0 },
+  { id: 'pangolin', n: 'Pangolin', r: 'rare', b: '#8a6a4a', y: '#d9c2a3', e: 4, k: 0 },
+  { id: 'mousedeer', n: 'Mousedeer', r: 'rare', b: '#a8643a', y: '#f1d7bd', e: 6, k: 0 },
+  { id: 'civet', n: 'Civet', r: 'rare', b: '#5d5d5d', y: '#d6d6d6', e: 5, k: 0 },
+  { id: 'heron', n: 'Heron', r: 'rare', b: '#90a4ae', y: '#eceff1', e: 0, k: 9 },
+  { id: 'colugo', n: 'Colugo', r: 'rare', b: '#7a6f5f', y: '#cfc4b0', e: 5, k: 0 },
+  { id: 'hornbill', n: 'Hornbill', r: 'epic', b: '#222831', y: '#f7f1e3', e: 0, k: 9 },
+  { id: 'leopardcat', n: 'Leopard Cat', r: 'epic', b: '#c98a3c', y: '#f6dfb8', e: 6, k: 0 },
+  { id: 'dugong', n: 'Dugong', r: 'epic', b: '#8796a5', y: '#d9e1e8', e: 0, k: 0 },
+  { id: 'otter', n: 'Golden Otter', r: 'legendary', sp: 'otter' },
+  { id: 'dragon', n: 'Ember Dragon', r: 'mythic', sp: 'dragon' }];
+const RAR = {
+  common: { l: 'Common', c: '#c9d3dd', card: '#ffffff', edge: '#dfe5ec', ink: '#5b6b7d', taps: 2, tier: 'tierC' },
+  rare: { l: 'Rare', c: '#6cb8ff', card: '#e3f1ff', edge: '#6cb8ff', ink: '#1a5fa8', taps: 3, tier: 'tierR' },
+  epic: { l: 'Epic', c: '#ff8fc8', card: '#ffe6f2', edge: '#ff8fc8', ink: '#a3236b', taps: 10, tier: 'tierE' },
+  legendary: { l: 'Legendary', c: '#f5c542', card: '#fff3c4', edge: '#f5c542', ink: '#7a5600', taps: 30, tier: 'tierL' },
+  mythic: { l: 'Mythic', c: '#ff5a5f', card: '#ffe1d6', edge: '#ff5a5f', ink: '#8a0f1a', taps: 100, tier: 'tierM' } };
+const palById = id => PALS.find(p => p.id === id);
+function palSVG(p, w, h) {
+  if (p.sp === 'otter') return `<svg width="${w}" height="${h}" viewBox="0 0 150 140" aria-hidden="true"><ellipse cx="75" cy="92" rx="42" ry="36" fill="#b8742a"/><ellipse cx="75" cy="100" rx="26" ry="24" fill="#f3d3a4"/><circle cx="75" cy="50" r="34" fill="#b8742a"/><circle cx="47" cy="28" r="9" fill="#b8742a"/><circle cx="103" cy="28" r="9" fill="#b8742a"/><ellipse cx="75" cy="60" rx="20" ry="15" fill="#f3d3a4"/><circle cx="62" cy="46" r="5" fill="#1a1a1a"/><circle cx="88" cy="46" r="5" fill="#1a1a1a"/><circle cx="63.5" cy="44.5" r="1.6" fill="#fff"/><circle cx="89.5" cy="44.5" r="1.6" fill="#fff"/><ellipse cx="75" cy="56" rx="6" ry="4" fill="#3d2a00"/><path d="M69 63 q6 5 12 0" fill="none" stroke="#3d2a00" stroke-width="2.4" stroke-linecap="round"/><path d="M52 16 l8 -12 7 10 8 -12 8 12 7 -10 8 12z" fill="#f5c542" stroke="#c99a1a" stroke-width="2"/></svg>`;
+  if (p.sp === 'dragon') return `<svg width="${w}" height="${h}" viewBox="0 0 150 140" aria-hidden="true"><path d="M44 80 L6 34 L22 78 L2 66 L38 104 Z" fill="#b3202e"/><path d="M106 80 L144 34 L128 78 L148 66 L112 104 Z" fill="#b3202e"/><path d="M106 112 q30 6 34 -18 q-8 10 -22 6" fill="#e63946"/><ellipse cx="75" cy="98" rx="36" ry="30" fill="#e63946"/><ellipse cx="75" cy="104" rx="20" ry="21" fill="#f5c542"/><path d="M57 28 L50 4 L66 24 Z M93 28 L100 4 L84 24 Z" fill="#f5c542"/><circle cx="75" cy="50" r="28" fill="#e63946"/><ellipse cx="75" cy="62" rx="16" ry="11" fill="#ff7b7b"/><circle cx="70" cy="61" r="2" fill="#7a0f1a"/><circle cx="80" cy="61" r="2" fill="#7a0f1a"/><circle cx="64" cy="45" r="5" fill="#1a1a1a"/><circle cx="86" cy="45" r="5" fill="#1a1a1a"/><circle cx="65.5" cy="43.5" r="1.6" fill="#fff"/><circle cx="87.5" cy="43.5" r="1.6" fill="#fff"/><path d="M69 25 l6 -9 6 9z" fill="#f5c542"/></svg>`;
+  const ear = p.e ? `<circle cx="22" cy="12" r="${p.e}" fill="${p.b}"/><circle cx="50" cy="12" r="${p.e}" fill="${p.b}"/>` : '';
+  const beak = p.k ? `<path d="M36 26 l${p.k} 4 l-${p.k} 4z" fill="#ff9f1c"/>` : '';
+  return `<svg width="${w}" height="${h}" viewBox="0 0 72 62" aria-hidden="true">${ear}<ellipse cx="36" cy="44" rx="22" ry="16" fill="${p.b}"/><circle cx="36" cy="26" r="17" fill="${p.b}"/><ellipse cx="36" cy="31" rx="10" ry="7" fill="${p.y}"/>${beak}<circle cx="30" cy="22" r="2.6" fill="#1a1a1a"/><circle cx="42" cy="22" r="2.6" fill="#1a1a1a"/></svg>`;
+}
+const ghost = (w, h) => palSVG({ b: '#d3dae2', y: '#d3dae2', e: 5, k: 0 }, w, h).replace(/#1a1a1a/g, '#d3dae2');
+function avatarHTML(size) {
+  const p = S.avatar && palById(S.avatar);
+  if (p) return `<div style="width:${size}px;height:${size}px;border-radius:50%;background:#fff;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none">${palSVG(p, size - 8, size - 12)}</div>`;
+  const ini = (S.name || 'Me').trim().slice(0, 2).toUpperCase();
+  return `<div style="width:${size}px;height:${size}px;border-radius:50%;background:var(--gold);border:3px solid #fff;display:flex;align-items:center;justify-content:center;font:800 ${Math.round(size / 2.6)}px 'Baloo 2',sans-serif;color:#3a2c00;flex:none">${esc(ini)}</div>`;
+}
+
+/* ---------- icons ---------- */
+const I = {
+  back: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  close: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>',
+  shell: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c5 0 9 4 9 9 0 3-2 6-4 7H7c-2-1-4-4-4-7 0-5 4-9 9-9z" fill="#f5c542"/><path d="M12 5v14M8 7l2 12M16 7l-2 12" stroke="#c99a1a" stroke-width="1.6" fill="none"/></svg>',
+  fire: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4 0-6 1-9z" fill="#ff9f5a"/></svg>',
+  map: '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z M9 4v14 M15 6v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+  paw: '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="9" r="2.2" fill="currentColor"/><circle cx="12" cy="6.5" r="2.2" fill="currentColor"/><circle cx="17" cy="9" r="2.2" fill="currentColor"/><path d="M12 12c3 0 6 3 6 5.5S15.5 20 12 20s-6-.5-6-2.5S9 12 12 12z" fill="currentColor"/></svg>',
+  parent: '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M14 20c0-3 1.5-5 3-5s4 1.5 4 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  lock: '<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="#5d6e66"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="#5d6e66" stroke-width="2.4"/></svg>',
+  check: '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="#3a2c00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+
+/* ---------- view state ---------- */
+let view = 'start', P = null, G = null, H = null, modal = null, lastRun = null, palPick = null;
+function go(v) { view = v; modal = null; render(); window.scrollTo(0, 0); }
+
+/* ---------- screens ---------- */
+function startScreen() {
+  return `<div class="top"><div class="row"><img src="/img/logo-64.png" alt="" width="34" height="34"><div class="dsp" style="font-size:18px">Edge 4 Exams · PSLE</div></div></div>
+  <div class="pad stack" style="flex:1">
+    <h1 style="font-size:44px;color:var(--teal)">Math Island</h1>
+    <p style="margin:0;font-size:17px">A free game that trains PSLE Math problem sums in <b>15 minutes a day</b>. Your child builds the bar model, finds 1 unit, then answers. Every correct, quick answer earns shells, and shells hatch island pals.</p>
+    <div class="card stack" style="gap:8px">
+      <div class="dsp" style="font-size:18px">For parents</div>
+      <div class="small">World 1 is <b>Bar Bridge</b>: "times as many", "more than" and three-person questions. Each level needs 6 solved with 4 on the first try. Then a 5-question gate exam with no hints (pass with 4 of 5) proves mastery.</div>
+      <div class="small">After each session your child passes the phone back and you get a short report: what they did, how long they took and where they got stuck.</div>
+      <div class="small muted">Progress is saved on this device only. Nothing is sent anywhere.</div>
+    </div>
+    <label for="nm" class="dsp" style="font-size:18px">Child's first name (optional)</label>
+    <input id="nm" maxlength="16" autocomplete="off" value="${esc(S.name)}" placeholder="e.g. Wei Ling" style="height:52px;border:2px solid var(--line);border-radius:14px;padding:0 14px;font:700 18px Nunito,sans-serif;background:#fff">
+    <button class="btn" data-a="begin">Start playing</button>
+    <a href="${FREE}" class="small" style="text-align:center">Parents: free sample of 3 PSLE Math methods (PDF)</a>
+    <p class="small muted" style="margin:0">Independent study aid by Edge 4 Exams Singapore. Not affiliated with MOE or SEAB. Every question is original.</p>
+  </div>`;
+}
+
+function header() {
+  return `<div class="top"><div class="row">${avatarHTML(46)}<div class="grow" style="line-height:1.2"><div style="font-weight:800;font-size:17px">${esc(S.name || 'Explorer')}</div><div class="small" style="opacity:.9">Bar Bridge · ${S.gate.passed ? 'Mastered' : 'Level ' + (curLevel() + 1)}</div></div>
+  <div class="pill">${I.fire}${S.streak}</div><div class="pill">${I.shell}${S.shells}</div></div></div>`;
+}
+function navBar(on) {
+  return `<div class="nav"><button class="${on === 'map' ? 'on' : ''}" data-a="go" data-v="map">${I.map}Map</button><button class="${on === 'pals' ? 'on' : ''}" data-a="go" data-v="pals">${I.paw}Pals</button><button class="${on === 'parents' ? 'on' : ''}" data-a="go" data-v="parents">${I.parent}Parents</button></div>`;
+}
+function mapScreen() {
+  const done = S.today.done, n = S.today.reps.length, cl = curLevel();
+  const ring = Math.min(1, n / SESSION), dash = Math.round(ring * 100);
+  const nodes = [[196, 26], [36, 104], [196, 182]].map(([x, y], i) => {
+    const st = mastered(i) ? 'done' : (i === cl ? 'cur' : 'lock');
+    return `<button class="node ${st}" style="left:${x}px;top:${y}px" data-a="level" data-v="${i}" aria-label="Level ${i + 1}: ${LEVELS[i]}"><div class="disc">${st === 'done' ? I.check : (st === 'lock' ? I.lock : i + 1)}</div><div class="lbl">${LEVELS[i]}</div></button>`;
+  }).join('');
+  const gst = S.gate.passed ? 'done' : (gateReady() ? 'cur' : 'lock');
+  const gate = `<button class="node ${gst}" style="left:36px;top:240px" data-a="gate" aria-label="Bar Bridge gate exam"><div class="disc" style="border-radius:50%">${gst === 'done' ? I.check : (gst === 'lock' ? I.lock : '<svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12h-5v-6H9v6z" fill="#0f6e6e"/></svg>')}</div><div class="lbl">Gate exam</div></button>`;
+  const lv = S.levels[cl];
+  const prog = S.gate.passed ? `<b>Bar Bridge mastered!</b> Keep training daily to stay sharp. Supposition Farm is coming soon.`
+    : gateReady() ? (S.gate.cool > 0 ? `Gate exam unlocks again after <b>${S.gate.cool}</b> more practice rep${S.gate.cool > 1 ? 's' : ''}.` : `<b>All 3 levels mastered.</b> Tap the gate to take the exam: 5 questions, no hints, pass with 4.`)
+    : `<b>Level ${cl + 1}: ${LEVELS[cl]}</b><div class="row small" style="margin-top:6px"><span class="grow">Solved</span><b>${Math.min(lv.s, NEED_S)}/${NEED_S}</b></div><div class="meter"><i style="width:${Math.min(100, lv.s / NEED_S * 100)}%;background:var(--green)"></i></div><div class="row small" style="margin-top:6px"><span class="grow">First try, no hints</span><b>${Math.min(lv.f, NEED_F)}/${NEED_F}</b></div><div class="meter"><i style="width:${Math.min(100, lv.f / NEED_F * 100)}%"></i></div>`;
+  const eggNeed = Math.max(0, EGG_COST - S.shells);
+  return header() + `<div class="pad stack">
+    <button class="row card" data-a="train" style="border:0;text-align:left;background:var(--deep);color:#fff;box-shadow:0 5px 0 #021f1f;width:100%">
+      <svg width="52" height="52" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="#1e5a5a" stroke-width="6"/><circle cx="20" cy="20" r="16" fill="none" stroke="#f5c542" stroke-width="6" stroke-linecap="${dash ? 'round' : 'butt'}" pathLength="100" stroke-dasharray="${dash} 100" transform="rotate(-90 20 20)"/></svg>
+      <div class="grow" style="line-height:1.25"><div class="dsp" style="font-size:19px">${done ? 'Today’s training done!' : n ? 'Continue today’s training' : 'Start today’s training'}</div>
+      <div class="small" style="color:#a9d1cd">${done ? 'Come back tomorrow for your streak, or practise more now' : `${n} of ${SESSION} reps · about 15 minutes`}</div></div>
+      <div class="dsp" style="color:var(--gold);font-size:20px">${done ? 'More' : 'Go'}</div>
+    </button>
+    <div class="map" role="group" aria-label="Bar Bridge island">
+      <svg style="position:absolute;inset:0" width="100%" height="100%" viewBox="0 0 360 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <ellipse cx="255" cy="70" rx="110" ry="52" fill="#ffe3a3"/><ellipse cx="255" cy="64" rx="96" ry="40" fill="#5cc46b"/>
+        <ellipse cx="95" cy="148" rx="105" ry="50" fill="#ffe3a3"/><ellipse cx="95" cy="142" rx="90" ry="38" fill="#5cc46b"/>
+        <ellipse cx="255" cy="226" rx="105" ry="50" fill="#ffe3a3"/><ellipse cx="255" cy="220" rx="90" ry="38" fill="#5cc46b"/>
+        <ellipse cx="95" cy="290" rx="80" ry="40" fill="#e9d6a6"/><ellipse cx="95" cy="285" rx="66" ry="30" fill="#8fbf9a"/>
+        <path d="M250 100 C 220 130 120 110 95 150 S 230 190 255 225 S 120 260 95 280" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round" opacity=".85"/>
+      </svg>${nodes}${gate}
+    </div>
+    <div class="card">${prog}</div>
+    <div class="card row"><div class="grow small"><b>Next egg</b> · ${eggNeed ? `${S.shells}/${EGG_COST} shells` : (S.today.hatched ? 'Ready tomorrow (one egg a day)' : 'Ready! Finish today’s training to hatch it')}</div>
+      <div class="meter" style="width:110px"><i style="width:${Math.min(100, S.shells / EGG_COST * 100)}%"></i></div></div>
+    <div class="card"><div class="dsp" style="font-size:17px">More worlds coming</div><div class="small muted" style="margin-top:4px">Supposition Farm · Before–After Tower · Rewind Cave</div></div>
+  </div>` + navBar('map');
+}
+
+/* ---------- training ---------- */
+function startRun() { const base = S.today.done ? 0 : S.today.reps.length; lastRun = { reps: [], combo: 0, best: 0, base, target: SESSION - base }; nextRep(); }
+function chooseLevel() {
+  const cl = curLevel(), done = [0, 1, 2].filter(mastered);
+  if (done.length && (Math.random() < .34 || S.gate.passed)) {
+    if (S.weak) { const wl = { 'times-total': 0, 'times-diff': 0, 'more-total': 1, 'three-total': 2 }[S.weak]; if (done.includes(wl) && Math.random() < .5) return wl; }
+    return pick(done);
+  }
+  return cl;
+}
+function nextRep() {
+  const lvl = chooseLevel(), q = gen(lvl);
+  P = { q, model: q.people.map(p => ({ u: 1, x: 0 })), step: 'build', wrong: { build: 0, unit: 0, ans: 0 }, hint: false, t0: now(), ts: now(), guess: false,
+    msg: 'Build the model. Use + and − to give each person the right number of units.', tone: 'info', earned: null, dis: [] };
+  go('play');
+}
+function bars(q, m, showVals) {
+  return q.people.map((p, i) => {
+    const mm = m[i], col = COLS[i % 3];
+    const blocks = Array.from({ length: mm.u }, () => `<i class="u" style="background:${col}">${showVals ? q.unit : ''}</i>`).join('') + (mm.x ? `<i class="x">${showVals || P.step !== 'build' ? '+' + q.d : 'extra'}</i>` : '');
+    const ctl = P.step === 'build' ? `<div class="ctl"><button data-a="u-" data-v="${i}" aria-label="Remove a unit from ${esc(p.n)}">−</button><button data-a="u+" data-v="${i}" aria-label="Add a unit to ${esc(p.n)}">+</button>${q.lvl === 1 ? `<button class="xt ${mm.x ? 'on' : ''}" data-a="x" data-v="${i}" aria-pressed="${mm.x ? 'true' : 'false'}">+ extra</button>` : ''}</div>` : '';
+    return `<div class="person"><div class="row"><b style="font-size:16px">${esc(p.n)}</b>${ctl}</div><div class="bar">${blocks}</div></div>`;
+  }).join('');
+}
+function playScreen() {
+  const q = P.q, r = lastRun, n = r.base + r.reps.length;
+  const repBar = Array.from({ length: SESSION }, (_, i) => `<i style="background:${i < n ? '#f5c542' : (i === n ? '#fff' : 'rgba(255,255,255,.3)')}"></i>`).join('');
+  const totalUnits = q.people.reduce((s, p) => s + p.u, 0);
+  const totalLine = P.step !== 'build' ? `<div class="total">${q.kind === 'times-diff' ? `Difference: ${q.sum}` : q.kind === 'more-total' ? `Altogether: 2 units + ${q.d} = ${2 * q.unit + q.d}` : `Altogether: ${totalUnits} units`}${P.step === 'answer' || P.step === 'done' ? ` &nbsp;→&nbsp; 1 unit = ${q.unit}` : ''}</div>` : '';
+  const stepName = { build: 'Step 1 of 3 · Draw the model', unit: 'Step 2 of 3 · Find 1 unit', answer: 'Step 3 of 3 · Answer the question', done: 'Solved!' }[P.step];
+  let action = '';
+  if (P.step === 'build') action = `<button class="btn dark" data-a="check">Check my model</button>`;
+  if (P.step === 'unit' || P.step === 'answer') {
+    const os = P.step === 'unit' ? q.uOpts : q.aOpts;
+    action = `<div class="small muted" style="font-weight:800">${P.step === 'unit' ? (q.kind === 'more-total' ? `Take away the extra first. ${q.sum}. What is 1 unit?` : `${q.sum}. What is 1 unit?`) : `How many ${esc(q.it)} does ${esc(q.people[q.ask].n)} have?`}</div><div class="choices">${os.map(v => `<button class="choice ${P.dis.includes(v) ? 'no' : ''}" data-a="pick" data-v="${v}" ${P.dis.includes(v) ? 'disabled' : ''}>${v}</button>`).join('')}</div>`;
+  }
+  if (P.step === 'done') {
+    const e = P.earned;
+    action = `<div class="card" style="background:var(--deep);color:#fff"><div class="row"><div class="grow small" style="line-height:1.6">Correct <b>+10</b> · Speed <b>+${e.speed}</b>${e.first ? ' · First try <b>+4</b>' : ''}${e.combo ? ` · Combo <b>+${e.combo}</b>` : ''}</div><div class="dsp" style="font-size:30px;color:var(--gold)">+${e.total}</div></div></div>
+      <div class="small muted">${esc(q.why)}</div>
+      <button class="btn gold" data-a="next">${n >= SESSION ? 'Finish training' : 'Next rep'}</button>`;
+  }
+  return `<div class="top"><div class="row"><button class="icon-btn" data-a="quit" aria-label="Stop training">${I.close}</button>
+    <div class="grow" style="line-height:1.15"><div class="dsp" style="font-size:18px">Bar Bridge · Rep ${Math.min(n + 1, SESSION)} of ${SESSION}</div><div class="small" style="opacity:.95">Level ${q.lvl + 1}: ${LEVELS[q.lvl]}</div></div>
+    <div class="combo"><b>x${r.combo}</b><span>combo</span></div></div><div class="reps">${repBar}</div></div>
+  <div class="pad stack" style="flex:1">
+    <div class="card prob">${q.text}</div>
+    <div class="card"><div class="row" style="margin-bottom:8px"><div class="dsp grow" style="font-size:15px;color:var(--teal)">${stepName}</div></div>${bars(q, P.model, P.step === 'answer' || P.step === 'done')}${totalLine}</div>
+    ${action}
+    <div class="fb ${P.tone}" role="status" aria-live="polite">${esc(P.msg)}</div>
+    ${P.step !== 'done' ? `<button class="btn ghost" data-a="hint" style="min-height:46px;font-size:16px">${P.hint ? 'Hint used' : 'Show a hint (no first-try bonus)'}</button>` : ''}
+  </div>`;
+}
+function buildFeedback() {
+  const q = P.q, m = P.model, base = q.people.findIndex(p => p.u === 1 && !p.x);
+  if (m[base].u !== 1) return `Start with ${q.people[base].n}: give ${q.people[base].n} just 1 unit.`;
+  for (let i = 0; i < q.people.length; i++) {
+    const t = q.people[i];
+    if (q.lvl === 1) { if (m[i].u !== 1) return `${t.n} and ${q.people[base].n} both start with the same 1 unit.`; }
+    else if (m[i].u !== t.u) return `${t.n} has ${t.u === 1 ? 'the same as' : 'how many times as many as'} ${q.people[base].n}? Count the units again.`;
+  }
+  for (let i = 0; i < q.people.length; i++) if (!!m[i].x !== !!q.people[i].x) return `Who has the extra ${q.d}? Add the extra bit only to that person's bar.`;
+  return 'Read the question again.';
+}
+function modelOK() { return P.q.people.every((t, i) => P.model[i].u === t.u && !!P.model[i].x === !!t.x); }
+function finishRep() {
+  const q = P.q, secs = (now() - P.t0) / 1000, wrongs = P.wrong.build + P.wrong.unit + P.wrong.ans;
+  const first = !wrongs && !P.hint, r = lastRun;
+  r.combo = first ? r.combo + 1 : 0; r.best = Math.max(r.best, r.combo);
+  const speed = secs <= 25 ? 8 : secs >= 90 ? 0 : Math.round(8 * (90 - secs) / 65);
+  const combo = first ? Math.min(5, r.combo - 1) : 0;
+  const total = 10 + speed + (first ? 4 : 0) + combo;
+  P.earned = { speed, first, combo, total };
+  S.shells += total; S.total += 1;
+  const lv = S.levels[q.lvl]; lv.s++; if (first) lv.f++;
+  if (S.gate.cool > 0) S.gate.cool--;
+  const rep = { lvl: q.lvl, kind: q.kind, ms: Math.round(secs * 1000), w: { ...P.wrong }, hint: P.hint, first, guess: P.guess, c: first ? 'g' : (wrongs <= 1 ? 'y' : 'm') };
+  r.reps.push(rep);
+  if (!S.today.done && S.today.reps.length < SESSION) { S.today.reps.push(rep); S.today.best = Math.max(S.today.best, r.best); }
+  P.step = 'done'; P.tone = 'good';
+  P.msg = first ? pick(['Perfect! First try!', 'Brilliant, no mistakes!', 'Super fast and spot on!', 'Champion work!']) : pick(['Solved! Well done.', 'You got there!', 'Nice, you fixed it!']);
+  buzz(first ? [20, 40, 20] : 20);
+  save();
+}
+function endRun() {
+  const firstFinish = !S.today.done && S.today.reps.length >= SESSION;
+  if (firstFinish) {
+    S.today.done = true;
+    if (S.lastDay !== today()) { S.streak = S.lastDay === yday() ? S.streak + 1 : 1; S.lastDay = today(); }
+    const rpt = report(S.today.reps); S.weak = rpt.weakKind; save();
+  }
+  if (S.shells >= EGG_COST && !S.today.hatched) return startHatch(firstFinish ? 'done' : 'map');
+  go(firstFinish ? 'done' : 'map');
+}
+
+/* ---------- report ---------- */
+function report(reps) {
+  const n = reps.length, first = reps.filter(r => r.first).length, hints = reps.filter(r => r.hint).length;
+  const avg = n ? Math.round(reps.reduce((s, r) => s + r.ms, 0) / n / 1000) : 0;
+  const by = {};
+  reps.forEach(r => { const b = by[r.kind] || (by[r.kind] = { n: 0, ms: 0, w: 0, f: 0 }); b.n++; b.ms += r.ms; b.w += r.w.build + r.w.unit + r.w.ans; b.f += r.first ? 1 : 0; });
+  const kinds = Object.keys(by).map(k => ({ k, n: by[k].n, avg: by[k].ms / by[k].n / 1000, w: by[k].w / by[k].n, f: by[k].f / by[k].n }));
+  let strong = null, weak = null;
+  kinds.forEach(x => { if (!strong || x.f > strong.f || (x.f === strong.f && x.avg < strong.avg)) strong = x; if (!weak || x.w > weak.w || (x.w === weak.w && x.avg > weak.avg)) weak = x; });
+  if (weak && strong && weak.k === strong.k) weak = kinds.length > 1 ? kinds.filter(x => x.k !== strong.k).sort((a, b) => b.w - a.w)[0] : null;
+  if (weak && weak.w === 0 && weak.avg < avg * 1.2) weak = null;
+  const buildW = reps.reduce((s, r) => s + r.w.build, 0), unitW = reps.reduce((s, r) => s + r.w.unit, 0), ansW = reps.reduce((s, r) => s + r.w.ans, 0);
+  const guesses = reps.filter(r => r.guess).length;
+  const name = S.name || 'Your child';
+  const L = [];
+  L.push(`${name} solved ${n} question${n === 1 ? '' : 's'} today, ${first} on the first try with no hints. Average time: ${avg} seconds a question.`);
+  if (strong && strong.n >= 2 && strong.f >= .5) L.push(`Strongest today: ${KIND[strong.k]} (${Math.round(strong.f * 100)}% first try, about ${Math.round(strong.avg)}s each).`);
+  if (weak) L.push(`Needs more practice: ${KIND[weak.k]}, which took about ${Math.round(weak.avg)}s each with ${weak.w.toFixed(1)} mistakes per question.`);
+  const most = Math.max(buildW, unitW, ansW);
+  if (most > 0) L.push(most === buildW ? `Most mistakes happened while drawing the model, so the question wording is the sticking point, not the arithmetic.` : most === unitW ? `The model was usually right, but finding 1 unit caused slips. Check the division step.` : `The model and 1 unit were usually right, but the final answer slipped. This often means answering for the wrong person, so remind them to re-read who the question asks about.`);
+  if (guesses) L.push(`${guesses} answer${guesses > 1 ? 's were' : ' was'} tapped in under 5 seconds and wrong, which looks like guessing.`);
+  if (hints) L.push(`Hints used: ${hints}.`);
+  const tip = !weak ? `"Show me how you drew the model for the hardest one." Explaining it out loud makes the method stick.`
+    : weak.k === 'more-total' ? `"If one person has more, what do you take away first so the bars are equal?"`
+    : weak.k === 'times-diff' ? `"If the bars are 4 units and 1 unit, how many units is the difference?"`
+    : weak.k === 'three-total' ? `"Who is the smallest? Give them 1 unit first, then build the others from that."`
+    : `"Which person is the smaller amount? That one gets 1 unit."`;
+  return { n, first, avg, lines: L, tip, weakKind: weak ? weak.k : null, kinds };
+}
+
+/* ---------- daily done + share ---------- */
+function shareText() {
+  const reps = S.today.reps, sq = { g: '\u{1F7E9}', y: '\u{1F7E8}', m: '⬜' };
+  const first = reps.filter(r => r.first).length;
+  return `Math Island · Day ${S.streak} streak\n${reps.map(r => sq[r.c]).join('')}\n${first}/${reps.length} first try · best combo x${S.today.best}\nCan your P5/P6 beat this? Free 15-min daily PSLE game:\n${SITE}`;
+}
+function doneScreen() {
+  const reps = S.today.reps, first = reps.filter(r => r.first).length;
+  const col = { g: 'var(--green)', y: '#f0b429', m: '#c9d3dd' };
+  return `<div style="flex:1;background:var(--teal);color:#fff;display:flex;flex-direction:column;padding:22px 16px;gap:14px;padding-top:max(22px,env(safe-area-inset-top))">
+    <div style="text-align:center"><div class="dsp" style="font-size:15px;color:#cfe9e6">Day ${S.streak} streak</div><h1 style="font-size:40px">Training done!</h1><div class="small" style="color:#cfe9e6">${reps.length} reps · ${first} first try · best combo x${S.today.best}</div></div>
+    <div class="card" style="color:var(--ink);box-shadow:0 8px 0 var(--teal2)">
+      <div class="row"><div class="dsp grow" style="font-size:20px">Math Island</div><b>${first}/${reps.length}</b></div>
+      <div class="grid3" style="grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px">${reps.map(r => `<div class="sq" style="background:${col[r.c]}"></div>`).join('')}</div>
+      <div class="row small" style="gap:12px;margin-top:12px;flex-wrap:wrap;font-weight:800;color:var(--muted)"><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:var(--green);border-radius:3px"></i>First try</span><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:#f0b429;border-radius:3px"></i>Hint or 1 slip</span><span class="row" style="gap:5px"><i class="sq" style="width:12px;background:#c9d3dd;border-radius:3px"></i>Needed help</span></div>
+    </div>
+    <button class="btn gold" data-a="share" id="shareBtn">Tap to share</button>
+    <div id="shareFallback"></div>
+    <button class="btn" data-a="go" data-v="handoff" style="background:var(--deep);box-shadow:0 5px 0 #021f1f">Next</button>
+  </div>`;
+}
+async function doShare() {
+  const t = shareText(), btn = document.getElementById('shareBtn');
+  try { if (navigator.share) { await navigator.share({ text: t }); return; } } catch (e) { if (e && e.name === 'AbortError') return; }
+  try { await navigator.clipboard.writeText(t); btn.textContent = 'Copied! Paste it in WhatsApp'; return; } catch (e) {}
+  document.getElementById('shareFallback').innerHTML = `<textarea readonly style="width:100%;height:130px;border-radius:14px;border:0;padding:10px;font:14px Nunito,sans-serif" aria-label="Text to share">${esc(t)}</textarea>`;
+}
+
+/* ---------- handoff + report ---------- */
+function handoffScreen() {
+  return `<div style="flex:1;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 24px 24px;gap:18px">
+    <div class="dsp" style="font-size:15px;color:#a9d1cd">Great work${S.name ? ', ' + esc(S.name) : ''}!</div>
+    <h1 style="font-size:36px">Pass the phone back to your parent.</h1>
+    <svg width="220" height="200" viewBox="0 0 240 220" aria-hidden="true"><circle cx="120" cy="110" r="100" fill="#0b4a4a"/><rect x="88" y="44" width="64" height="116" rx="12" fill="#f5c542"/><rect x="96" y="56" width="48" height="84" rx="5" fill="#073f3f"/><path d="M110 98l8 8 14-16" fill="none" stroke="#3ccf91" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 180 C 70 150, 170 150, 210 180" fill="none" stroke="#f08a24" stroke-width="6" stroke-linecap="round" stroke-dasharray="4 12"/></svg>
+    <p style="margin:0;color:#cfe9e6">Your shells, pals and streak are saved.</p>
+    <div class="card" style="margin-top:auto;width:100%;color:var(--ink)">
+      <div class="dsp" style="font-size:18px">For parents</div>
+      <div class="small muted" style="margin:4px 0 12px">Press and hold to open today's report.</div>
+      <button class="btn dark hold" id="holdBtn"><i></i><span style="position:relative">Press and hold</span></button>
+    </div>
+  </div>`;
+}
+function reportCard(reps) {
+  if (!reps.length) return `<div class="card">No training yet today. Reports appear after your child finishes a session.</div>`;
+  const R = report(reps), lab = { g: ['First try', 'var(--green)'], y: ['Hint or 1 slip', '#c98a00'], m: ['Needed help', 'var(--red)'] };
+  const rows = reps.map((r, i) => `<div class="row" style="align-items:flex-start;gap:10px;padding:8px 0;border-top:1px solid #eef0f2"><div style="width:26px;height:26px;border-radius:8px;background:${lab[r.c][1]};color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none">${i + 1}</div><div class="grow"><div style="font-weight:800;font-size:14px">Level ${r.lvl + 1} · ${KIND[r.kind]}</div><div class="small muted">${lab[r.c][0]}${r.w.build ? ` · model redrawn ${r.w.build}x` : ''}${r.w.unit ? ` · 1-unit slip ${r.w.unit}x` : ''}${r.w.ans ? ` · answer slip ${r.w.ans}x` : ''}${r.hint ? ' · used a hint' : ''}${r.guess ? ' · quick guess' : ''}</div></div><div style="font-weight:800;font-size:13px;white-space:nowrap">${Math.round(r.ms / 1000)}s</div></div>`).join('');
+  return `<div class="card"><div class="dsp" style="font-size:18px">Today in a nutshell</div>${R.lines.map(l => `<p style="margin:8px 0 0;font-size:15px">${esc(l)}</p>`).join('')}<p class="small muted" style="margin:10px 0 0">Written by the game from your child's taps and timings.</p></div>
+  <div class="card" style="background:#fff7e0"><div class="dsp" style="font-size:18px">Something to ask</div><p style="margin:6px 0 0;font-size:15px">${esc(R.tip)}</p></div>
+  <div class="card"><div class="dsp" style="font-size:18px">Each question</div>${rows}</div>
+  ${R.weakKind ? `<div class="card"><div class="dsp" style="font-size:18px">Tomorrow</div><p style="margin:6px 0 0;font-size:15px">Review questions will lean towards ${esc(KIND[R.weakKind])}.</p></div>` : ''}`;
+}
+function reportScreen() {
+  const reps = S.today.reps;
+  const R = reps.length ? report(reps) : null;
+  return `<div class="top"><div class="row"><button class="icon-btn" data-a="go" data-v="map" aria-label="Back to map">${I.back}</button><div class="grow"><div class="small" style="opacity:.9">Parent report · ${new Date().toLocaleDateString('en-SG', { weekday: 'short', day: 'numeric', month: 'short' })}</div><div class="dsp" style="font-size:24px">${esc(S.name || 'Your child')}'s training</div></div></div>
+  ${R ? `<div class="grid3" style="grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px;text-align:center">${[[R.first + '/' + R.n, 'first try'], [R.avg + 's', 'avg time'], [S.streak, 'day streak'], [S.shells, 'shells']].map(([v, k]) => `<div style="background:rgba(0,0,0,.2);border-radius:14px;padding:8px 4px"><div class="dsp" style="font-size:20px;color:var(--gold)">${v}</div><div style="font-size:11px;font-weight:800">${k}</div></div>`).join('')}</div>` : ''}</div>
+  <div class="pad stack">${reportCard(reps)}
+    <div class="card"><div class="dsp" style="font-size:17px">Want the full method list?</div><p class="small" style="margin:6px 0 10px">The P6 Math Heuristics Pack covers 27 PSLE methods with worked examples and bar models (S$29, PDF). Try 3 methods free first.</p><a class="btn" href="${FREE}">Get the free sample</a></div>
+    <button class="btn ghost" data-a="go" data-v="map">Back to the map</button></div>`;
+}
+function parentsScreen() {
+  return `<div class="top"><div class="dsp" style="font-size:24px">Parent corner</div><div class="small" style="opacity:.9">How Math Island works</div></div>
+  <div class="pad stack">
+    <button class="btn" data-a="go" data-v="report">Open today's report</button>
+    <div class="card small stack" style="gap:8px">
+      <div class="dsp" style="font-size:18px">The rules</div>
+      <div><b>Daily training:</b> 10 questions, about 15 minutes. Finishing keeps the streak alive.</div>
+      <div><b>Shells:</b> 10 for a correct answer, up to 8 for speed, 4 for first try with no hints, plus a combo bonus.</div>
+      <div><b>Eggs:</b> 120 shells hatch an egg, one a day at most. Shells are only earned by solving; nothing can be bought.</div>
+      <div><b>Mastery:</b> each level needs 6 solved, 4 of them first try. Then a 5-question gate exam with no hints; pass with 4 of 5. Missing the gate means 2 more practice questions before a retry.</div>
+      <div class="muted">Egg odds: Common 60%, Rare 28%, Epic 9%, Legendary 2.5%, Mythic 0.5%. A Legendary or better is guaranteed by the 30th egg.</div>
+    </div>
+    <div class="card small stack" style="gap:8px"><div class="dsp" style="font-size:18px">Privacy</div><div>Progress and reports stay on this device (browser storage). Nothing is uploaded. Clearing the browser's data resets the game.</div></div>
+    <div class="card small stack" style="gap:8px"><div class="dsp" style="font-size:18px">Child's name</div><div class="row"><input id="nm2" maxlength="16" value="${esc(S.name)}" aria-label="Child's first name" style="flex:1;height:48px;border:2px solid var(--line);border-radius:12px;padding:0 12px;font:700 16px Nunito,sans-serif"><button class="btn" style="width:auto;min-height:48px" data-a="rename">Save</button></div></div>
+    <a class="btn ghost" href="${FREE}">Free PSLE Math sample (3 methods)</a>
+    <button class="btn ghost" data-a="reset" style="color:var(--red)">Reset all progress</button>
+    <p class="small muted" style="margin:0">Math Island by Edge 4 Exams Singapore. Independent study aid, not affiliated with MOE or SEAB. Every question is original. Contact: edge4exams@proton.me</p>
+  </div>` + navBar('parents');
+}
+function palsScreen() {
+  const found = PALS.filter(p => S.pals[p.id]).length;
+  const tiles = PALS.map(p => {
+    const has = S.pals[p.id], R = RAR[p.r];
+    if (!has) return `<div class="pal" style="background:#f1f4f7;border-color:#e3e8ee">${ghost(70, 60)}<b style="color:#8a97a6">???</b><span style="color:#8a97a6">${R.l}</span></div>`;
+    return `<button class="pal" data-a="palpick" data-v="${p.id}" style="background:${R.card};border-color:${S.avatar === p.id ? 'var(--teal)' : R.edge}">${palSVG(p, 70, 60)}<b>${esc(p.n)}</b><span style="color:${R.ink}">${R.l}${has > 1 ? ' · x' + has : ''}</span></button>`;
+  }).join('');
+  return `<div class="top"><div class="row"><div class="grow"><div class="dsp" style="font-size:24px">My Island Pals</div><div class="small">${found} of ${PALS.length} found · tap a pal to make it your avatar</div></div><div class="pill">${I.shell}${S.shells}</div></div>
+    <div class="meter" style="margin-top:10px;background:rgba(255,255,255,.3)"><i style="width:${Math.min(100, S.shells / EGG_COST * 100)}%"></i></div><div class="small" style="margin-top:4px;font-weight:800">Next egg: ${Math.min(S.shells, EGG_COST)} / ${EGG_COST} shells${S.today.hatched ? ' · next hatch tomorrow' : ''}</div></div>
+  <div class="pad"><div class="grid3">${tiles}</div></div>` + navBar('pals');
+}
+
+/* ---------- gate exam ---------- */
+function startGate() {
+  const lv = shuffle([0, 1, 2, ri(0, 2), ri(0, 2)]);
+  G = { qs: lv.map(gen), i: 0, input: '', results: [], t0: now(), done: false };
+  S.gate.tries++; save(); go('gate');
+}
+function gateScreen() {
+  if (G.done) {
+    const ok = G.results.filter(Boolean).length, pass = ok >= 4;
+    return `<div style="flex:1;background:${pass ? 'linear-gradient(180deg,#f5c542,#e0a400)' : 'var(--deep)'};color:${pass ? '#3a2c00' : '#fff'};display:flex;flex-direction:column;padding:28px 16px 16px;gap:14px;text-align:center">
+      <div class="dsp" style="font-size:15px">Bar Bridge Gate</div>
+      <h1 style="font-size:44px">${pass ? 'Gate smashed!' : 'So close!'}</h1>
+      <div class="dsp" style="font-size:64px">${ok}/5</div>
+      <p style="margin:0;font-size:17px">${pass ? 'Bar Bridge is mastered. You can spot a bar model question on sight now.' : 'You need 4 of 5 to pass. Do 2 more practice questions, then try a fresh set.'}</p>
+      ${pass ? `<div class="card" style="color:var(--ink);text-align:left"><div class="dsp" style="font-size:18px">Badge: Bar Model Master</div><p class="small" style="margin:6px 0 0">Supposition Farm, the next world, is coming soon. Keep your streak going with daily training until then.</p></div>
+      <div class="card" style="color:var(--ink);text-align:left"><div class="dsp" style="font-size:17px">Parents</div><p class="small" style="margin:6px 0 10px">The P6 Math Heuristics Pack teaches all 27 PSLE methods with worked examples and bar models (S$29, PDF).</p><a class="btn" href="${PACK}">See the pack</a></div>` : ''}
+      <button class="btn ${pass ? 'dark' : 'gold'}" data-a="go" data-v="map" style="margin-top:auto">Back to the map</button></div>`;
+  }
+  const q = G.qs[G.i];
+  const dots = G.qs.map((_, i) => `<div style="height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:800 15px 'Baloo 2',sans-serif;background:${i < G.i ? (G.results[i] ? 'var(--green)' : '#7a2a24') : (i === G.i ? '#fff' : '#1e5a5a')};color:${i === G.i ? 'var(--deep)' : '#fff'}">${i < G.i ? (G.results[i] ? '✓' : '✗') : 'Q' + (i + 1)}</div>`).join('');
+  const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'Clear', '0', 'Submit'];
+  return `<div style="flex:1;background:var(--deep);color:#fff;display:flex;flex-direction:column;padding:16px;gap:12px;padding-top:max(16px,env(safe-area-inset-top))">
+    <div class="row"><button class="icon-btn" data-a="gatequit" aria-label="Leave the exam">${I.close}</button><div class="dsp grow" style="font-size:22px">Bar Bridge Gate</div></div>
+    <div class="row" style="gap:6px;flex-wrap:wrap"><span class="tag" style="background:#1e5a5a">5 questions</span><span class="tag" style="background:#1e5a5a">No hints</span><span class="tag" style="background:#1e5a5a">No model help</span><span class="tag" style="background:var(--gold);color:#3a2c00">Pass: 4 of 5</span></div>
+    <div class="grid3" style="grid-template-columns:repeat(5,minmax(0,1fr));gap:6px">${dots}</div>
+    <div class="card prob" style="color:var(--ink)">${q.text}</div>
+    <div class="row"><label for="ga" style="font-weight:800">Answer</label><output id="ga" style="flex:1;height:54px;border:3px solid var(--gold);border-radius:16px;background:#0b4a4a;font:800 28px 'Baloo 2',sans-serif;display:flex;align-items:center;justify-content:center">${esc(G.input || ' ')}</output><span style="font-weight:800">${esc(q.it)}</span></div>
+    <div class="keypad">${keys.map(k => `<button class="${k === 'Submit' ? 'ok' : k === 'Clear' ? 'cl' : ''}" data-a="key" data-v="${k}">${k}</button>`).join('')}</div>
+  </div>`;
+}
+
+/* ---------- hatching ---------- */
+function rollPal() {
+  S.eggs++; S.since++;
+  const r = Math.random() * 100;
+  let t = r < .5 ? 'mythic' : r < 3 ? 'legendary' : r < 12 ? 'epic' : r < 40 ? 'rare' : 'common';
+  if (S.since >= 30 && t !== 'legendary' && t !== 'mythic') t = 'legendary';
+  if (t === 'legendary' || t === 'mythic') S.since = 0;
+  return pick(PALS.filter(p => p.r === t));
+}
+const STEPS = [[0, 'Tap to hatch!', '#ffffff'], [1, 'Crack! Keep tapping!', '#ffffff'], [3, 'Ooh, this egg is tougher…', '#6cb8ff'], [10, 'Keep going! Something strong is in here!', '#ff8fc8'], [20, 'Did it just move?!', '#ff8fc8'], [30, 'Wow… it’s getting warm!', '#f5c542'], [50, 'Don’t stop! It’s glowing!', '#f5c542'], [70, 'Something HUGE is inside!', '#ff5a5f'], [85, 'You’re almost there, keep tapping!', '#ff5a5f']];
+function startHatch(after) {
+  S.shells -= EGG_COST; S.today.hatched = true;
+  const pal = rollPal(), dup = !!S.pals[pal.id];
+  S.pals[pal.id] = (S.pals[pal.id] || 0) + 1;
+  if (dup) S.shells += 20;
+  if (!S.avatar) S.avatar = pal.id;
+  save();
+  H = { pal, dup, taps: 0, need: RAR[pal.r].taps, stage: 'egg', after, timer: null };
+  go('hatch');
+}
+const EGG_TOP = 'M42 100 C 45 60 65 20 100 20 C 135 20 155 60 158 100 L142 88 L128 102 L114 86 L100 100 L88 86 L72 102 L58 88 Z';
+const EGG_BOT = 'M42 100 L58 88 L72 102 L88 86 L100 100 L114 86 L128 102 L142 88 L158 100 C 162 120 160 150 140 168 C 125 178 110 180 100 180 C 90 180 75 178 60 168 C 40 150 38 120 42 100 Z';
+function hatchScreen() {
+  if (H.stage === 'reveal') {
+    const p = H.pal, R = RAR[p.r];
+    const rays = Array.from({ length: 8 }, (_, i) => `<path d="M0 0 L-16 -140 L16 -140 Z" transform="rotate(${i * 45})"/>`).join('');
+    return `<div class="hatch"><div class="dsp" style="text-align:center;font-size:16px;color:#cfe9e6;margin-top:10px">Your egg hatched!</div>
+      <div style="position:relative;height:380px;display:flex;align-items:center;justify-content:center">
+        <svg class="rays" width="290" height="290" viewBox="-140 -140 280 280" aria-hidden="true"><g fill="${R.c}" opacity=".25">${rays}</g></svg>
+        <i class="spark" style="left:20%;bottom:40px;width:10px;height:10px;background:${R.c}"></i><i class="spark" style="right:22%;bottom:60px;width:8px;height:8px;background:#fff;animation-delay:.8s"></i><i class="spark" style="left:45%;bottom:20px;width:6px;height:6px;background:${R.c};animation-delay:1.5s"></i>
+        <div class="reveal" style="position:relative;width:220px;background:${R.card};border:5px solid #fff;border-radius:28px;padding:16px 12px 14px;text-align:center;color:#1a1a1a;box-shadow:0 0 44px ${R.c}">
+          <span class="tag" style="background:${R.ink};color:#fff">${R.l}</span>
+          <div style="margin:6px auto 0;width:150px;height:130px;display:flex;align-items:center;justify-content:center">${palSVG(p, 150, 130)}</div>
+          <div class="dsp" style="font-size:26px">${esc(p.n)}</div>
+          <div class="small" style="font-weight:800;margin-top:4px">${H.dup ? 'You already have one: +20 shells' : 'New pal for your island!'}</div>
+        </div>
+      </div>
+      <div class="row" style="gap:10px"><button class="btn gold" data-a="avatar">Make it my avatar</button><button class="btn" data-a="hatchdone" style="background:rgba(255,255,255,.14);box-shadow:none">Continue</button></div>
+    </div>`;
+  }
+  return `<div class="hatch" id="hatchBox" style="--dur:${H.need >= 100 ? '2.3s' : '1.5s'}">
+    <div class="dsp" style="text-align:center;font-size:16px;color:#cfe9e6;margin-top:10px">You earned an egg! ${EGG_COST} shells</div>
+    <button class="eggbtn" id="eggBtn" aria-label="Tap the egg to hatch it">
+      <div class="glow" id="glow" style="background:#fff"></div>
+      <svg class="egg wob" id="egg" width="200" height="210" viewBox="0 0 200 210" aria-hidden="true">
+        <ellipse cx="100" cy="194" rx="62" ry="9" fill="#000" opacity=".3"/>
+        <circle cx="100" cy="98" r="30" fill="#fff6cf"/>
+        <path d="${EGG_BOT}" fill="#fff4dc"/><circle cx="130" cy="130" r="9" fill="#f5c542"/><circle cx="68" cy="140" r="6" fill="#f08a24"/><circle cx="104" cy="150" r="4" fill="#f5c542"/>
+        <g class="lid"><path d="${EGG_TOP}" fill="#fff4dc"/><circle cx="78" cy="60" r="7" fill="#f5c542"/><circle cx="122" cy="50" r="5" fill="#f08a24"/>
+          <path id="c1" d="M96 34 l9 12 -7 9 8 11 -5 8" fill="none" stroke="#5a3a00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" visibility="hidden"/></g>
+        <path id="c2" d="M48 108 l14 4 -3 10 12 4 M152 112 l-12 6 5 9 -10 6" fill="none" stroke="#5a3a00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" visibility="hidden"/>
+        <path id="c3" d="M70 150 l10 -8 6 9 9 -7 M120 156 l6 -10 8 6" fill="none" stroke="#5a3a00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" visibility="hidden"/>
+      </svg>
+      <div class="hlabel" id="hlabel" aria-live="polite">Tap to hatch!</div>
+    </button>
+    <div class="flash"></div>
+    <p class="small" style="margin:auto 0 0;text-align:center;color:#a9d1cd">Rarer eggs take more taps to hatch.</p>
+  </div>`;
+}
+function eggTap() {
+  if (H.stage !== 'egg') return;
+  H.taps++; buzz(12);
+  const T = H.taps, egg = document.getElementById('egg');
+  egg.classList.remove('wob', 'bA', 'bB'); void egg.getBoundingClientRect(); egg.classList.add(T % 2 ? 'bA' : 'bB');
+  let cur = STEPS[0]; for (const x of STEPS) if (T >= x[0]) cur = x;
+  const lab = document.getElementById('hlabel'), glow = document.getElementById('glow');
+  lab.textContent = cur[1]; lab.style.color = cur[2]; glow.style.background = cur[2];
+  const sz = Math.min(300, 220 + T) + 'px'; glow.style.width = sz; glow.style.height = sz;
+  if (T >= 1) document.getElementById('c1').setAttribute('visibility', 'visible');
+  if (T >= 2) document.getElementById('c2').setAttribute('visibility', 'visible');
+  if (T >= 10) document.getElementById('c3').setAttribute('visibility', 'visible');
+  if (T >= H.need) {
+    H.stage = 'opening';
+    const box = document.getElementById('hatchBox');
+    glow.style.animation = `${RAR[H.pal.r].tier} var(--dur) linear forwards`;
+    box.classList.add('opening'); lab.textContent = 'It’s hatching…'; lab.style.color = '#fff';
+    buzz([30, 60, 30, 60, 80]);
+    H.timer = setTimeout(() => { H.stage = 'reveal'; render(); }, H.need >= 100 ? 2300 : 1500);
+  }
+}
+
+/* ---------- render + events ---------- */
+function render() {
+  let html = '';
+  if (view === 'start') html = startScreen();
+  else if (view === 'map') html = mapScreen();
+  else if (view === 'play') html = playScreen();
+  else if (view === 'done') html = doneScreen();
+  else if (view === 'handoff') html = handoffScreen();
+  else if (view === 'report') html = reportScreen();
+  else if (view === 'parents') html = parentsScreen();
+  else if (view === 'pals') html = palsScreen();
+  else if (view === 'gate') html = gateScreen();
+  else if (view === 'hatch') html = hatchScreen();
+  if (modal) html += `<div class="modal" role="dialog" aria-modal="true"><div class="sheet stack"><div class="dsp" style="font-size:22px">${esc(modal.title)}</div><p style="margin:0">${esc(modal.body)}</p><div class="row" style="gap:10px"><button class="btn ghost" data-a="mno">${esc(modal.no)}</button><button class="btn ${modal.danger ? '' : 'gold'}" data-a="myes" style="${modal.danger ? 'background:var(--red);box-shadow:0 5px 0 #7a2a24' : ''}">${esc(modal.yes)}</button></div></div></div>`;
+  app.innerHTML = html;
+  if (view === 'hatch' && H.stage === 'egg') document.getElementById('eggBtn').addEventListener('pointerdown', e => { e.preventDefault(); eggTap(); });
+  if (view === 'handoff') bindHold();
+}
+function bindHold() {
+  const b = document.getElementById('holdBtn'); let t = null;
+  const start = e => { e.preventDefault(); b.classList.add('go'); t = setTimeout(() => go('report'), 1200); };
+  const stop = () => { b.classList.remove('go'); clearTimeout(t); };
+  b.addEventListener('pointerdown', start); ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => b.addEventListener(ev, stop));
+  b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go('report'); });
+}
+function ask(title, body, yes, no, fn, danger) { modal = { title, body, yes, no, fn, danger }; render(); }
+
+app.addEventListener('click', e => {
+  const b = e.target.closest('[data-a]'); if (!b) return;
+  const a = b.dataset.a, v = b.dataset.v;
+  if (a === 'begin') { const nm = document.getElementById('nm'); S.name = nm ? nm.value.trim().slice(0, 16) : ''; S.started = true; save(); go('map'); return; }
+  if (a === 'go') { go(v); return; }
+  if (a === 'mno') { modal = null; render(); return; }
+  if (a === 'myes') { const f = modal.fn; modal = null; f(); return; }
+  if (a === 'train' || a === 'level') { if (a === 'level' && +v !== curLevel() && !mastered(+v)) return; startRun(); return; }
+  if (a === 'gate') { if (S.gate.passed || !gateReady()) return; if (S.gate.cool > 0) { ask('Not yet', `Do ${S.gate.cool} more practice question${S.gate.cool > 1 ? 's' : ''} first, then the gate opens again.`, 'Practise now', 'Later', startRun); return; } ask('Ready for the gate?', '5 questions, no hints, no model help. You need 4 correct to pass.', 'Start the exam', 'Not yet', startGate); return; }
+  if (a === 'quit') { ask('Stop training?', 'Your shells so far are saved. Finish all 10 reps to keep your streak and hatch today’s egg.', 'Stop', 'Keep going', () => go('map')); return; }
+  if (a === 'gatequit') { ask('Leave the exam?', 'This attempt will not count. You can start a fresh one any time.', 'Leave', 'Stay', () => go('map')); return; }
+  if (view === 'play') {
+    if (a === 'u+' || a === 'u-') { const m = P.model[+v]; m.u = Math.max(1, Math.min(6, m.u + (a === 'u+' ? 1 : -1))); render(); return; }
+    if (a === 'x') { const m = P.model[+v]; m.x = m.x ? 0 : 1; render(); return; }
+    if (a === 'check') {
+      if (modelOK()) { P.step = 'unit'; P.ts = now(); P.dis = []; P.tone = 'good'; P.msg = 'Model looks right! Now find 1 unit.'; buzz(15); }
+      else { P.wrong.build++; P.tone = 'bad'; P.msg = buildFeedback(); lastRun.combo = 0; buzz([10, 30, 10]); }
+      render(); return;
+    }
+    if (a === 'pick') {
+      const n = +v, q = P.q;
+      if (P.step === 'unit') {
+        if (n === q.unit) { P.step = 'answer'; P.ts = now(); P.dis = []; P.tone = 'good'; P.msg = `Yes! 1 unit = ${q.unit}. Now answer the question.`; buzz(15); }
+        else { P.wrong.unit++; P.dis.push(n); P.tone = 'bad'; P.msg = q.kind === 'more-total' ? `Not quite. First take away the extra ${q.d}, then share what is left into 2 equal units.` : `Not quite. ${q.sum}. Share it equally into the units.`; lastRun.combo = 0; buzz([10, 30, 10]); }
+      } else if (P.step === 'answer') {
+        if (n === q.ans) finishRep();
+        else { if (now() - P.ts < 5000) P.guess = true; P.wrong.ans++; P.dis.push(n); const pu = q.people[q.ask]; P.tone = 'bad'; P.msg = `Look at ${pu.n}'s bar: ${pu.u} unit${pu.u > 1 ? 's' : ''}${pu.x ? ' + the extra ' + q.d : ''}. Each unit is ${q.unit}.`; lastRun.combo = 0; buzz([10, 30, 10]); }
+      }
+      render(); return;
+    }
+    if (a === 'hint') {
+      const q = P.q; P.hint = true; P.tone = 'info';
+      if (P.step === 'build') { const base = q.people.findIndex(p => p.u === 1 && !p.x); P.msg = q.lvl === 1 ? `Both start with 1 unit. ${q.people[0].n} also has an extra ${q.d}: tap "+ extra" on that bar.` : `${q.people[base].n} gets 1 unit. Everyone else is built from that: "${q.people.find(p => p.u > 1).u} times as many" means that many units.`; }
+      else if (P.step === 'unit') P.msg = q.kind === 'more-total' ? `${q.sum}. Divide by 2.` : `${q.sum}. Divide to find 1 unit.`;
+      else P.msg = `1 unit = ${q.unit}. ${q.people[q.ask].n} has ${q.people[q.ask].u} unit${q.people[q.ask].u > 1 ? 's' : ''}${q.people[q.ask].x ? ' plus ' + q.d : ''}.`;
+      render(); return;
+    }
+    if (a === 'next') { if (lastRun.reps.length >= lastRun.target) endRun(); else nextRep(); return; }
+  }
+  if (view === 'gate' && a === 'key') {
+    if (v === 'Clear') G.input = '';
+    else if (v === 'Submit') { if (!G.input) return; G.results.push(+G.input === G.qs[G.i].ans); G.input = ''; G.i++; buzz(15);
+      if (G.i >= G.qs.length) { G.done = true; const ok = G.results.filter(Boolean).length; if (ok >= 4) S.gate.passed = true; else S.gate.cool = 2; save(); } }
+    else if (G.input.length < 5) G.input += v;
+    render(); return;
+  }
+  if (a === 'share') { doShare(); return; }
+  if (a === 'avatar') { S.avatar = H.pal.id; save(); }
+  if (a === 'avatar' || a === 'hatchdone') { clearTimeout(H.timer); go(H.after); return; }
+  if (a === 'palpick') { S.avatar = v; save(); render(); return; }
+  if (a === 'rename') { const nm = document.getElementById('nm2'); S.name = nm.value.trim().slice(0, 16); save(); render(); return; }
+  if (a === 'reset') { ask('Reset everything?', 'This deletes all shells, pals, streak and level progress on this device. It cannot be undone.', 'Reset', 'Cancel', () => { S = fresh(); save(); go('start'); }, true); return; }
+});
+
+load();
+view = S.started ? 'map' : 'start';
+render();
+}
+</script>
+</body>
+</html>
