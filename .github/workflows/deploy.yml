@@ -1,0 +1,38 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required files are present
+        run: |
+          for f in index.html robots.txt sitemap.xml llms.txt google9b9b5686a32dca00.html; do
+            test -s "site/$f" || { echo "Missing site/$f"; exit 1; }
+          done
+          test "$(ls site/*.md | wc -l)" -ge 1 || { echo "No Markdown copies"; exit 1; }
+          echo "All required files present."
+
+      # Pull requests only run the check. Merging to main deploys site/ as-is to the live site.
+      - name: Deploy to Cloudflare Pages (edge4exams)
+        if: github.event_name != 'pull_request'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=edge4exams --branch=main --commit-dirty=true

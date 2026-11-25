@@ -1,0 +1,17 @@
+:root{--bg:#f7f8fb;--card:#fff;--ink:#14213d;--muted:#55607a;--accent:#0b6e4f;--accent-ink:#fff;--line:#e3e7ef}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1420;--card:#171e2e;--ink:#e8ecf5;--muted:#a3adc2;--accent:#3ccf91;--accent-ink:#06261a;--line:#273148}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent)}header,main,footer{max-width:960px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:6px}
+.brand{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}.brand span{color:var(--accent)}
+nav a{margin-left:14px;font-size:15px}
+h1{font-size:clamp(26px,4.5vw,38px);line-height:1.2;margin:26px 0 10px}h2{font-size:22px;margin:34px 0 10px}
+.lead{font-size:18px;color:var(--muted);max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column}
+.tile{aspect-ratio:4/3;border-radius:10px;background:linear-gradient(140deg,#0b6e4f,#14532d);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+.tile small{color:#f5c542;font-weight:700;letter-spacing:.08em}.tile b{font-size:clamp(26px,5vw,36px);line-height:1.1;margin:4px 0}.tile span{font-size:13px;opacity:.85}
+.card h3{font-size:16px;margin:10px 0 4px}.price{color:var(--muted);margin:0 0 10px}
+.btn{display:inline-block;margin-top:auto;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:10px;text-align:center}
+ul{padding-left:20px}details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0}summary{font-weight:700;cursor:pointer}
+.note{font-size:14px;color:var(--muted)}footer{margin-top:48px;padding-bottom:40px;border-top:1px solid var(--line);padding-top:18px}

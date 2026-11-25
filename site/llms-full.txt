@@ -1,0 +1,619 @@
+# Edge 4 Exams Singapore
+
+> Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+Each exam page has a plain Markdown copy (same content as the web page).
+
+## Exam pages
+
+- [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md): CMFAS M8 Complete Pack S$34, CM-CIS Bundle: M8 + M8A S$49
+- [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md): CMFAS M8A Complete Pack S$29, CM-CIS Bundle: M8 + M8A S$49
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md): CMFAS M9 Complete Pack S$34, CM-LIP Bundle: M9 + M9A S$45
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md): CMFAS M9A Complete Pack S$24, CM-LIP Bundle: M9 + M9A S$45
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md): CMFAS RES5 Exam Notes and Mock S$39
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md): HI Complete Bundle: Parts 1 and 2 + Trap List S$25, HI Exam Notes Part 1 S$16, HI Exam Notes Part 2 S$16, HI Exam Trap List S$8
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md): Trading Licence Bundle: RES1B + CM-EIP S$59
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md): CGI Complete Bundle: BCP + PGI + ComGI S$59, SCI BCP Notes + 50-Question Mock S$24, SCI PGI Notes + 50-Question Mock S$24, SCI ComGI Notes + 50-Question Mock S$24
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md): CEA RES Complete Bundle: Paper 1 + 2 S$49, CEA RES Paper 1 Notes + 80-Question Mock S$29, CEA RES Paper 2 Notes + 80-Question Mock S$29
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md): CAMS Exam Notes + 100-Question Practice Exam S$59
+
+## Store
+
+- [Edge 4 Exams on Gumroad](https://edge4examsg.gumroad.com/): all packs, instant PDF download
+- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, https://edge4examsg.gumroad.com/l/bank-starter
+
+---
+
+# CMFAS M8 exam notes and mock exam (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-m8/
+
+M8 is the paper you need to advise on unit trusts and other collective investment schemes: 50 questions in 1 hour, and you need 70%. Fund parties, authorised vs recognised schemes and sales-charge sums catch out a lot of candidates.
+
+## Packs and prices
+
+- **CMFAS M8 Complete Pack**: S$34, instant PDF. Buy: https://edge4examsg.gumroad.com/l/m8
+- **CM-CIS Bundle: M8 + M8A**: S$49, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cmcis
+
+## What's in the pack
+
+- 11 pages of shortcut notes
+- Calculation Decoder with 5 worked examples: NAV, sales charges, total return, dollar-cost averaging and the Sharpe ratio
+- M8 Trap List: 20 wrong answers that look right
+- Full 50-question mock exam in the real format, with answers and explanations
+- One-page summary sheet
+
+## Topics covered
+
+- Investment basics, unit trusts and VCCs
+- Fund manager vs trustee, and fund types
+- ETFs and REITs
+- The SFA and the Code on CIS
+- Pricing, charges, CPFIS and advising clients
+
+## CMFAS M8 questions people ask
+
+**How many questions are in the CMFAS M8 exam?**
+
+M8 has 50 multiple-choice questions in 1 hour, and the pass mark is 70%.
+
+**What is CM-CIS?**
+
+CM-CIS combines M8 and M8A. The CM-CIS Bundle gives you both complete packs, 100 practice questions in total, for less than buying them separately.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS M8A exam notes and mock exam (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-m8a/
+
+M8A is the paper for funds that use derivatives and structured payoffs: 50 questions in 1 hour, and you need 70%. Options, CPPI and leveraged ETFs are where most marks are lost.
+
+## Packs and prices
+
+- **CMFAS M8A Complete Pack**: S$29, instant PDF. Buy: https://edge4examsg.gumroad.com/l/m8a
+- **CM-CIS Bundle: M8 + M8A**: S$49, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cmcis
+
+## What's in the pack
+
+- 10 pages of shortcut notes
+- Calculation Decoder with worked payoffs: calls, puts, time value, capped participation, CPPI exposure and daily-reset decay
+- M8A Trap List: 20 wrong answers that look right
+- Full 50-question mock exam in the real format, with answers and explanations
+- One-page summary sheet
+
+## Topics covered
+
+- Structured funds, capital protection vs capital guarantee
+- Forwards, futures, options, swaps and CDS
+- Code on CIS derivative limits
+- CPPI vs OBPI and hedge-fund strategies
+- Leveraged, inverse and synthetic products, and suitability
+
+## CMFAS M8A questions people ask
+
+**How many questions are in the CMFAS M8A exam?**
+
+M8A has 50 multiple-choice questions in 1 hour, and the pass mark is 70%.
+
+**Do I need M8 before M8A?**
+
+Many candidates take them together as CM-CIS. The CM-CIS Bundle covers both papers with 100 practice questions.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md)
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS M9 exam notes and mock exam (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-m9/
+
+M9 (Life Insurance and Investment-Linked Policies) is the paper every life insurance adviser in Singapore must pass: 100 questions in 2 hours, and you need 70%. The ILP calculations chapter is where many candidates lose marks.
+
+## Packs and prices
+
+- **CMFAS M9 Complete Pack**: S$34, instant PDF. Buy: https://edge4examsg.gumroad.com/l/m9
+- **CM-LIP Bundle: M9 + M9A**: S$45, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cmlip
+
+## What's in the pack
+
+- 12 pages of shortcut notes covering all 17 chapters
+- ILP calculations worked step by step, plus a Calculation Decoder
+- M9 Trap List: 20 wrong answers that look right
+- Full 100-question mock exam in the real format, with answers and explanations
+- One-page formula and numbers sheet
+
+## Topics covered
+
+- Term, whole life and endowment policies
+- Participating policies and bonuses
+- Investment-linked policies (ILPs) and ILP calculations
+- Underwriting and policy services
+- Contract law, agency and nominations
+
+## CMFAS M9 questions people ask
+
+**How many questions are in the CMFAS M9 exam?**
+
+M9 has 100 multiple-choice questions in 2 hours, and the pass mark is 70%.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS M9A exam notes and mock exam (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-m9a/
+
+M9A is the paper you need to advise on structured investment-linked policies: 50 questions in 1 hour, and you need 70%. Options, futures and "capital protected vs capital guaranteed" catch out a lot of candidates.
+
+## Packs and prices
+
+- **CMFAS M9A Complete Pack**: S$24, instant PDF. Buy: https://edge4examsg.gumroad.com/l/m9a
+- **CM-LIP Bundle: M9 + M9A**: S$45, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cmlip
+
+## What's in the pack
+
+- 8 pages of shortcut notes
+- Calculation Decoder for derivatives questions
+- M9A Trap List: 15 wrong answers that look right
+- Full 50-question mock exam in the real format, with answers and explanations
+- One-page summary sheet
+
+## Topics covered
+
+- Structured products and their risks
+- Forwards, futures and swaps
+- Calls and puts with worked payoffs
+- Structured ILPs
+- Suitability and case-study questions
+
+## CMFAS M9A questions people ask
+
+**How many questions are in the CMFAS M9A exam?**
+
+M9A has 50 multiple-choice questions in 1 hour, and the pass mark is 70%.
+
+**What is CM-LIP?**
+
+CM-LIP combines M9 and M9A in one sitting. The CM-LIP Bundle gives you both complete packs, 150 practice questions in total, at a lower price than buying them separately.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS RES5 exam notes and mock exam (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-res5/
+
+RES5 (Rules and Regulations for Financial Advisory Services) is one of the toughest CMFAS papers. You need 75% on Part I and 80% on Part II in the same sitting, or you resit everything. There are no calculation questions.
+
+## Packs and prices
+
+- **CMFAS RES5 Exam Notes and Mock**: S$39, instant PDF. Buy: https://edge4examsg.gumroad.com/l/res5
+
+## What's in the pack
+
+- 21 pages of shortcut notes in 6 chapters
+- RES5 Trap List: 20 wrong answers that look right
+- Full 150-question mock exam: 110 Part I and 40 Part II questions, with answers and explanations
+- 40 extra practice questions inside the notes
+- One-page numbers sheet
+
+## Topics covered
+
+- The Financial Advisers Act (FAA) framework
+- Representative rules, disclosure and recommendations
+- Balanced scorecard and fair dealing
+- FIDReC, AML/CFT and PDPA
+- Market misconduct, ethics and skills
+
+## CMFAS RES5 questions people ask
+
+**What is the pass mark for CMFAS RES5?**
+
+You need 75% on Part I and 80% on Part II, both in the same sitting.
+
+**Do I need a calculator for RES5?**
+
+No. RES5 has no calculation questions.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS HI (Health Insurance) exam notes (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-hi/
+
+The HI paper covers health insurance in Singapore. These notes were written by a former adviser who specialised in critical illness planning for 9 years, and are split into two parts so you can study one topic block at a time.
+
+## Packs and prices
+
+- **HI Complete Bundle: Parts 1 and 2 + Trap List**: S$25, instant PDF. Buy: https://edge4examsg.gumroad.com/l/hibundle
+- **HI Exam Notes Part 1**: S$16, instant PDF. Buy: https://edge4examsg.gumroad.com/l/hi1
+- **HI Exam Notes Part 2**: S$16, instant PDF. Buy: https://edge4examsg.gumroad.com/l/hi2
+- **HI Exam Trap List**: S$8, instant PDF. Buy: https://edge4examsg.gumroad.com/l/hitraps
+
+## What's in the pack
+
+- Part 1 (17 pages): critical illness, disability income and long-term care, with 40 practice questions
+- Part 2 (18 pages): healthcare financing, MediShield Life, Integrated Shield Plans and group medical, with 40 practice questions
+- HI Trap List: 25 wrong answers that look right
+- Every answer explained
+
+## Topics covered
+
+- Critical illness insurance (LIA CI Framework 2024)
+- Disability income insurance
+- Long-term care and CareShield Life
+- Healthcare financing, MediShield Life and MediSave
+- Integrated Shield Plans, riders and group medical
+
+## CMFAS HI questions people ask
+
+**Are the HI notes updated for 2026?**
+
+Yes. They reflect the LIA Critical Illness Framework 2024 and the Integrated Shield Plan rider rules that apply from 1 April 2026.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CMFAS RES1B and CM-EIP exam notes and mock exams (2026)
+
+Web page: https://edge4exams.pages.dev/cmfas-res1b-cm-eip/
+
+To deal in securities at a non-exchange member firm you need RES1B and CM-EIP. RES1B is 60 questions and needs 75%, so you can miss only 15. CM-EIP is 90 questions in 2.5 hours, and you need 63 right.
+
+## Packs and prices
+
+- **Trading Licence Bundle: RES1B + CM-EIP**: S$59, instant PDF. Buy: https://edge4examsg.gumroad.com/l/trading
+
+## What's in the pack
+
+- RES1B: 13 pages of notes, 20-item trap list, one-page rules summary and a 60-question mock
+- CM-EIP: 14 pages of notes, 20-item trap list, Calculation Decoder, formula sheet and a 90-question mock
+- Answers and explanations for every question
+
+## Topics covered
+
+- RES1B: regulators, CMS licensing and representatives
+- RES1B: accredited investors, CKA and CAR, best execution, client money
+- RES1B: market misconduct offences, ethics and AML/CFT
+- CM-EIP: equities, bonds and portfolio management
+- CM-EIP: unit trusts, ETFs, REITs and FX, with calculations
+
+## CMFAS RES1B and CM-EIP questions people ask
+
+**What is the pass mark for RES1B?**
+
+75%. You can miss at most 15 of the 60 questions.
+
+**How many questions are in CM-EIP?**
+
+90 questions in 2.5 hours. You need 63 correct to pass.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# SCI CGI exam notes and mock exams: BCP, PGI and ComGI (2026)
+
+Web page: https://edge4exams.pages.dev/sci-cgi/
+
+The SCI Certificate in General Insurance (CGI) is made up of three papers: BCP (Basic Insurance Concepts and Principles), PGI (Personal General Insurance) and ComGI (Commercial General Insurance). BCP is 40 questions in 45 minutes, closed book.
+
+## Packs and prices
+
+- **CGI Complete Bundle: BCP + PGI + ComGI**: S$59, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cgi
+- **SCI BCP Notes + 50-Question Mock**: S$24, instant PDF. Buy: https://edge4examsg.gumroad.com/l/bcp
+- **SCI PGI Notes + 50-Question Mock**: S$24, instant PDF. Buy: https://edge4examsg.gumroad.com/l/pgi
+- **SCI ComGI Notes + 50-Question Mock**: S$24, instant PDF. Buy: https://edge4examsg.gumroad.com/l/comgi
+
+## What's in the pack
+
+- Shortcut notes for each paper
+- A 50-question original mock exam for each paper, with answers and explanations
+- Buy one paper, or all three in the CGI Complete Bundle
+
+## Topics covered
+
+- BCP: risk, insurance principles and the insurance contract
+- BCP: utmost good faith, insurable interest, indemnity and proximate cause
+- PGI: motor, home, travel, personal accident and other personal covers
+- ComGI: property, liability, marine, engineering and other commercial covers
+- Claims, underwriting and the regulatory framework
+
+## SCI BCP, PGI and ComGI questions people ask
+
+**How many questions are in the SCI BCP exam?**
+
+BCP is 40 multiple-choice questions in 45 minutes, closed book. The mock gives you 50 questions to practise at the same pace.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CEA RES exam notes and mock exams: Paper 1 and Paper 2
+
+Web page: https://edge4exams.pages.dev/cea-res-exam/
+
+The Real Estate Salesperson (RES) exam has two papers. Paper 1 is the law paper and Paper 2 is the practical paper. Each mock follows the real format: 60 Section A questions plus 2 case studies with 20 double-mark questions, and you need 60 out of 100.
+
+## Packs and prices
+
+- **CEA RES Complete Bundle: Paper 1 + 2**: S$49, instant PDF. Buy: https://edge4examsg.gumroad.com/l/res-cea
+- **CEA RES Paper 1 Notes + 80-Question Mock**: S$29, instant PDF. Buy: https://edge4examsg.gumroad.com/l/res-p1
+- **CEA RES Paper 2 Notes + 80-Question Mock**: S$29, instant PDF. Buy: https://edge4examsg.gumroad.com/l/res-p2
+
+## What's in the pack
+
+- Paper 1: 11 pages of notes updated for the 2027 syllabus, 20-item trap list and an 80-question mock
+- Paper 2: 12 pages of notes with current rates, a Calculation Decoder with 6 worked examples, 20-item trap list and an 80-question mock
+- Answers and explanations for every question
+
+## Topics covered
+
+- Paper 1: land, estates, easements and Torrens title
+- Paper 1: contract and the OTP, agency, landlord and tenant, property torts
+- Paper 1: mortgages, wills and intestacy, co-ownership and planning
+- Paper 2: CEA rules, AML/CFT and marketing
+- Paper 2: HDB resale and renting, BSD, ABSD, SSD and loan limits
+
+## CEA RES exam questions people ask
+
+**What is the pass mark for the CEA RES exam?**
+
+Each paper is marked out of 100 and you need 60 to pass.
+
+**Are these updated for the 2027 syllabus?**
+
+Yes. Paper 1 includes the new topics such as Land Betterment Charge, property torts and the Residential Property Act.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md)
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+
+---
+
+# CAMS exam notes and practice exam (2026)
+
+Web page: https://edge4exams.pages.dev/cams-exam/
+
+CAMS is the anti-money laundering certification awarded by ACAMS. This pack condenses the material into short notes and gives you 100 original exam-style questions to practise on.
+
+## Packs and prices
+
+- **CAMS Exam Notes + 100-Question Practice Exam**: S$59, instant PDF. Buy: https://edge4examsg.gumroad.com/l/cams
+
+## What's in the pack
+
+- 12 pages of shortcut notes
+- 20-item trap list and acronym sheet
+- 100 original exam-style questions with answers and explanations
+
+## Topics covered
+
+- Money laundering, terrorist financing and proliferation financing
+- Typologies and red flags
+- FATF and global standard setters
+- US, EU and UK AML laws and sanctions
+- Compliance programmes, CDD, EDD, PEPs, monitoring, investigations and SARs
+
+## CAMS questions people ask
+
+**Is this affiliated with ACAMS?**
+
+No. It is an independent study aid. CAMS is a certification of ACAMS.
+
+**Are these real exam questions?**
+
+No. Every question is original and written in the style of the real exam. We never use leaked or copied exam content. Always read the official study text as well.
+
+**How do I get the files?**
+
+Checkout is on Gumroad. You get an instant PDF download that works on your phone, tablet or laptop.
+
+**Who writes the material?**
+
+A former financial adviser with 9 years in the Singapore industry.
+
+## Other exams
+
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
+
+## About Edge 4 Exams
+
+Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
