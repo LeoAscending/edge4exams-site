@@ -287,6 +287,10 @@ function startScreen() {
   <div class="pad stack" style="flex:1">
     <h1 style="font-size:44px;color:var(--teal)">Math Island</h1>
     <p style="margin:0;font-size:17px">A free game that trains PSLE Math problem sums in <b>15 minutes a day</b>. Your child builds the bar model, finds 1 unit, then answers. Every correct, quick answer earns shells, and shells hatch island pals.</p>
+    <div class="card row" style="background:#fff7e0;gap:12px;flex-wrap:wrap">
+      <div class="grow" style="min-width:180px"><div class="dsp" style="font-size:17px">Here for the free sample?</div><div class="small">3 PSLE Math methods with worked bar models. Free 4-page PDF.</div></div>
+      <a class="btn gold" href="${FREE}" style="width:auto;min-height:48px;font-size:17px">Get the free sample</a>
+    </div>
     <div class="card stack" style="gap:8px">
       <div class="dsp" style="font-size:18px">For parents</div>
       <div class="small">World 1 is <b>Bar Bridge</b>: "times as many", "more than" and three-person questions. Each level needs 6 solved with 4 on the first try. Then a 5-question gate exam with no hints (pass with 4 of 5) proves mastery.</div>
@@ -296,7 +300,6 @@ function startScreen() {
     <label for="nm" class="dsp" style="font-size:18px">Child's first name (optional)</label>
     <input id="nm" maxlength="16" autocomplete="off" value="${esc(S.name)}" placeholder="e.g. Wei Ling" style="height:52px;border:2px solid var(--line);border-radius:14px;padding:0 14px;font:700 18px Nunito,sans-serif;background:#fff">
     <button class="btn" data-a="begin">Start playing</button>
-    <a href="${FREE}" class="small" style="text-align:center">Parents: free sample of 3 PSLE Math methods (PDF)</a>
     <p class="small muted" style="margin:0">Independent study aid by Edge 4 Exams Singapore. Not affiliated with MOE or SEAB. Every question is original.</p>
   </div>`;
 }
