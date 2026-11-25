@@ -1,0 +1,23 @@
+# Edge 4 Exams Singapore
+
+> Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes and full-length mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+
+Each exam page has a plain Markdown copy (same content as the web page).
+
+## Exam pages
+
+- [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md): CMFAS M8 Complete Pack S$34, CM-CIS Bundle: M8 + M8A S$49
+- [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md): CMFAS M8A Complete Pack S$29, CM-CIS Bundle: M8 + M8A S$49
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md): CMFAS M9 Complete Pack S$34, CM-LIP Bundle: M9 + M9A S$45
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md): CMFAS M9A Complete Pack S$24, CM-LIP Bundle: M9 + M9A S$45
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md): CMFAS RES5 Exam Notes and Mock S$39
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md): HI Complete Bundle: Parts 1 and 2 + Trap List S$25, HI Exam Notes Part 1 S$16, HI Exam Notes Part 2 S$16, HI Exam Trap List S$8
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md): Trading Licence Bundle: RES1B + CM-EIP S$59
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md): CGI Complete Bundle: BCP + PGI + ComGI S$59, SCI BCP Notes + 50-Question Mock S$24, SCI PGI Notes + 50-Question Mock S$24, SCI ComGI Notes + 50-Question Mock S$24
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md): CEA RES Complete Bundle: Paper 1 + 2 S$49, CEA RES Paper 1 Notes + 80-Question Mock S$29, CEA RES Paper 2 Notes + 80-Question Mock S$29
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md): CAMS Exam Notes + 100-Question Practice Exam S$59
+
+## Store
+
+- [Edge 4 Exams on Gumroad](https://edge4examsg.gumroad.com/): all packs, instant PDF download
+- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, https://edge4examsg.gumroad.com/l/bank-starter

@@ -1,0 +1,35 @@
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+
+/llms*.txt
+  Content-Type: text/plain; charset=utf-8
+
+/cmfas-m8.md
+  Link: <https://edge4exams.pages.dev/cmfas-m8/>; rel="canonical"
+
+/cmfas-m8a.md
+  Link: <https://edge4exams.pages.dev/cmfas-m8a/>; rel="canonical"
+
+/cmfas-m9.md
+  Link: <https://edge4exams.pages.dev/cmfas-m9/>; rel="canonical"
+
+/cmfas-m9a.md
+  Link: <https://edge4exams.pages.dev/cmfas-m9a/>; rel="canonical"
+
+/cmfas-res5.md
+  Link: <https://edge4exams.pages.dev/cmfas-res5/>; rel="canonical"
+
+/cmfas-hi.md
+  Link: <https://edge4exams.pages.dev/cmfas-hi/>; rel="canonical"
+
+/cmfas-res1b-cm-eip.md
+  Link: <https://edge4exams.pages.dev/cmfas-res1b-cm-eip/>; rel="canonical"
+
+/sci-cgi.md
+  Link: <https://edge4exams.pages.dev/sci-cgi/>; rel="canonical"
+
+/cea-res-exam.md
+  Link: <https://edge4exams.pages.dev/cea-res-exam/>; rel="canonical"
+
+/cams-exam.md
+  Link: <https://edge4exams.pages.dev/cams-exam/>; rel="canonical"
