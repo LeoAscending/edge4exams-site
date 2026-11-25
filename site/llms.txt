@@ -23,7 +23,7 @@ Each page has a plain Markdown copy (same content as the web page).
 
 Edge 4 Exams also makes PSLE Math material for Primary 6: problem-solving methods with worked examples and bar models. Checkout and instant PDF download on Gumroad. Independent study aid, not affiliated with MOE or SEAB. Every question is original.
 
-- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29
+- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29; Free sample: 3 PSLE Math methods with bar models free (S$0+), https://edge4examsg.gumroad.com/l/free-psle-math-sample
 
 ## Store
 

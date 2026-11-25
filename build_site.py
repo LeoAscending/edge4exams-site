@@ -36,6 +36,7 @@ PAGES = [
                 "The most common mistake for each method",
                 "27 practice questions with a full answer key"],
         products=[("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None)],
+        free=("Free sample: 3 PSLE Math methods with bar models", "free-psle-math-sample", "Not sure yet? Try 3 of the 27 methods first, each with a worked example, bar model and practice question. Free 4-page PDF."),
         faq=[("Are these real PSLE questions?", "No. Every question is original and uses the problem-solving heuristics taught in Singapore primary schools. We never use real or copied exam papers."),
              ("Who is it for?", "P6 students preparing for PSLE Math, and P5 students who are starting on word-problem heuristics."),
              ("How should my child use it?", "One method a day for about four weeks: read the worked example together, cover the solution, let your child redo it alone, then try the practice question."),
@@ -283,6 +284,11 @@ figcaption{padding:14px 16px;font-size:15px;color:var(--muted)}
 .steps b{display:block;font-size:17px;margin-bottom:4px}
 .steps span{color:var(--muted);font-size:15px}
 .why{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;list-style:none;padding:0;margin:18px 0}
+.btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn-outline:hover{background:var(--accent);color:var(--accent-ink)}
+.free{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;background:var(--card);border:1px dashed var(--gold);border-left:5px solid var(--gold);border-radius:14px;padding:14px 18px;margin:28px 0 0}
+.free p{margin:0;max-width:620px}
+.free .btn{margin-top:0}
 .why li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:600}
 .why li::before{content:"";display:block;width:28px;height:4px;border-radius:2px;background:var(--gold);margin-bottom:10px}
 /* exam page */
@@ -436,6 +442,8 @@ def md_page(p):
     L = [f"# {p['h1']}", "", f"Web page: {url}", "", p["intro"], "", "## Packs and prices", ""]
     for name, price, slug, img in p["products"]:
         L.append(f"- **{name}**: {price}, instant PDF. Buy: {g(slug)}")
+    if p.get("free"):
+        L += ["", f"**{p['free'][0]}** (free, S$0+): {p['free'][2]} Download: {g(p['free'][1])}"]
     L += ["", "## What's in the pack", ""] + [f"- {x}" for x in p["inside"]]
     L += ["", f"## {p.get('topics_label', 'Topics covered')}", ""] + [f"- {x}" for x in p["topics"]]
     L += ["", f"## {p.get('faq_label', p['short'] + ' questions people ask')}", ""]
@@ -452,11 +460,13 @@ def llms_txt():
     for p in PAGES:
         if is_psle(p["path"]): continue
         prices = ", ".join(f"{n} {pr}" for n, pr, s, i in p["products"])
+        if p.get("free"): prices += f"; {p['free'][0]} free (S$0+), {g(p['free'][1])}"
         L.append(f"- [{p['title']}]({BASE}/{p['path']}.md): {prices}")
     L += ["", f"- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, {g('bank-starter')}", "", "## PSLE (primary school)", "", ABOUT_PSLE, ""]
     for p in PAGES:
         if not is_psle(p["path"]): continue
         prices = ", ".join(f"{n} {pr}" for n, pr, s, i in p["products"])
+        if p.get("free"): prices += f"; {p['free'][0]} free (S$0+), {g(p['free'][1])}"
         L.append(f"- [{p['title']}]({BASE}/{p['path']}.md): {prices}")
     L += ["", "## Store", "", f"- [Edge 4 Exams on Gumroad]({STORE}/): all packs, instant PDF download", ""]
     return "\n".join(L)
@@ -482,6 +492,9 @@ def exam_page(p):
              f'<div>{book(slug, img, name + " cover", eager=True)}</div></div></section>')
     body = [head(p["title"] + " | Edge 4 Exams", p["desc"], url, [ORG, crumbs, faq_ld(faqs)] + product_ld(p),
                  md=f"/{path}.md", og=OG.get(path, "og-home.jpg"), psle=psle, hero=phero)]
+    if p.get("free"):
+        fname, fslug, fblurb = p["free"]
+        body.append(f'<div class="free"><p><strong>{esc(fname)}</strong><br>{esc(fblurb)}</p><a class="btn btn-outline" href="{g(fslug)}">Get the free sample</a></div>')
     if len(p["products"]) > 1:
         body += ['<h2>Choose your pack</h2><p class="sub">Buy the full set or a single part.</p>', cards(p["products"])]
     body.append(f'<div class="cols" id="inside"><div><h2>What\'s in the pack</h2><ul class="ticks">' + "".join(f"<li>{esc(x)}</li>" for x in p["inside"]) + "</ul></div>"
