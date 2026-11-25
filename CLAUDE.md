@@ -7,6 +7,10 @@ Read this before changing anything. More than one Claude agent works in this rep
 - Deploy: `.github/workflows/deploy.yml`. On a pull request it only checks that `index.html`, `robots.txt`, `sitemap.xml`, `llms.txt`, the Google verification file and at least one `.md` copy exist in `site/`. On every push to `main` it runs the same check, then deploys `site/` to the existing Cloudflare Pages project `edge4exams` with Wrangler (a Direct Upload project, so Cloudflare's Git integration is not used). If the check fails, nothing is deployed. Secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set by the owner in GitHub.
 - `build_site.py` is the generator that produced the original exam pages, the Markdown copies, `llms.txt`, `llms-full.txt` and `_headers` (`python3 build_site.py` writes into `site/`, standard library only, and copies `static/` in first if it exists). If you redesign pages by hand instead, make sure the files below still exist and that each `.md` copy and `llms.txt` match the new page content and prices. Do not run `build_site.py` over a hand-built `site/` without checking the diff, because it rewrites every page it knows about.
 
+## Site structure
+- **PSLE is a separate section** from the professional licensing exams (owner's rule). PSLE pages (`PSLE_PATHS` in `build_site.py`) get their own header nav, cream hero, footer and About text, and never mention the former financial adviser. Professional pages only link to PSLE once, in the footer. Don't add PSLE to the home page hero, exam picker or popular packs.
+- Images are in `static/img/`: product thumbnails are the real Gumroad thumbnails as WebP (`<name>-thumb.webp`), share images are `og-*.jpg` (1200 wide), plus the logo, favicon and the public teaser images. Every `<img>` needs `alt`, `width` and `height`.
+
 ## Working rules
 - Work on a branch and open a pull request. The owner reviews and merges. Merging to `main` = live within about a minute.
 - Before pushing, check that the required files below are still in `site/`.
