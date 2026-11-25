@@ -36,6 +36,7 @@ PAGES = [
                 "The most common mistake for each method",
                 "27 practice questions with a full answer key"],
         products=[("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None)],
+        maker=("Why I made this", "I'm a parent, not a teacher. I got through every exam up to university mostly by pattern recognition: I learned to see which kind of question it was, and which method solves it. This pack teaches your child to do the same. Each method comes with the clue words that tell you when to use it, so they're never staring at a question with no idea where to start."),
         free=("Free sample: 3 PSLE Math methods with bar models", "free-psle-math-sample", "Not sure yet? Try 3 of the 27 methods first, each with a worked example, bar model and practice question. Free 4-page PDF."),
         faq=[("Are these real PSLE questions?", "No. Every question is original and uses the problem-solving heuristics taught in Singapore primary schools. We never use real or copied exam papers."),
              ("Who is it for?", "P6 students preparing for PSLE Math, and P5 students who are starting on word-problem heuristics."),
@@ -457,6 +458,8 @@ def md_page(p):
     if p.get("free"):
         L += ["", f"**{p['free'][0]}** (free, S$0+): {p['free'][2]} Download: {g(p['free'][1])}"]
     L += ["", "## What's in the pack", ""] + [f"- {x}" for x in p["inside"]]
+    if p.get("maker"):
+        L += ["", f"## {p['maker'][0]}", "", p["maker"][1]]
     L += ["", f"## {p.get('topics_label', 'Topics covered')}", ""] + [f"- {x}" for x in p["topics"]]
     L += ["", f"## {p.get('faq_label', p['short'] + ' questions people ask')}", ""]
     for q, a in page_faqs(p):
@@ -514,6 +517,8 @@ def exam_page(p):
     if psle:
         body.append('<h2>See how a method looks</h2><p class="sub">Every method comes with a bar model drawn to the exact numbers, like this one.</p>'
                     '<div class="bar-fig"><img src="/img/psle-bar-model.svg" alt="Bar model: Ali has 3 units, Ben has 1 unit plus 24 dollars, together 360 dollars. How much does Ben have?" width="520" height="250" loading="lazy"></div>')
+    if p.get("maker"):
+        body.append(f'<h2>{esc(p["maker"][0])}</h2><p class="lead">{esc(p["maker"][1])}</p>')
     if path in TEASER:
         src, alt, cap = TEASER[path]
         body.append(f'<h2>Look inside</h2><figure class="peek-one"><img src="{src}" alt="{esc(alt)}" width="720" height="720" loading="lazy" decoding="async"><figcaption>{esc(cap)}</figcaption></figure>')
