@@ -387,6 +387,7 @@ def foot(psle=False):
         return f"""</main><footer class="site-foot"><div class="wrap"><div class="fcols">
 <div><h4>Edge 4 Exams · PSLE</h4><p class="note">Clear, worked methods for PSLE Math, drawn as bar models and diagrams. Checkout and instant PDF download on Gumroad.</p></div>
 <div><h4>PSLE</h4><ul><li><a href="/psle-math/">PSLE Math heuristics (P6)</a></li><li><a href="{g('p6-math-heuristics')}">Buy the pack</a></li></ul></div>
+<div><h4>Follow</h4><ul><li><a href="https://www.tiktok.com/@edge4exams">TikTok @edge4exams</a></li><li><a href="https://www.instagram.com/edge4exams/">Instagram @edge4exams</a></li><li><a href="/math-island/">Math Island: free game</a></li></ul></div>
 <div><h4>More</h4><ul><li><a href="/">Edge 4 Exams home</a></li><li><a href="/llms.txt">Plain-text index (llms.txt)</a></li></ul></div></div>
 <p class="note">Questions? Email <a href="mailto:edge4exams@proton.me">edge4exams@proton.me</a></p>
 <p class="note">Independent study aid. Not affiliated with MOE or SEAB. Original questions, not real exam questions.</p></div></footer></body></html>"""
@@ -400,7 +401,7 @@ def foot(psle=False):
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "name": "Edge 4 Exams Singapore",
        "alternateName": ["Edge4Exams", "Edge 4 Exams", "Edge for Exams"], "url": BASE + "/",
-       "logo": BASE + "/img/logo-512.png", "sameAs": [STORE + "/"]}
+       "logo": BASE + "/img/logo-512.png", "sameAs": [STORE + "/", "https://www.tiktok.com/@edge4exams", "https://www.instagram.com/edge4exams/"]}
 
 LABELS = {"m8":("CMFAS","M8","Notes + 50-Q mock"),"m8a":("CMFAS","M8A","Notes + 50-Q mock"),"cmcis":("CM-CIS","M8 + M8A","Bundle, 100 Qs"),"bank-starter":("BANK STARTER","6 papers","480 Qs"),
  "m9":("CMFAS","M9","Notes + 100-Q mock"),"m9a":("CMFAS","M9A","Notes + 50-Q mock"),"cmlip":("CM-LIP","M9 + M9A","Bundle, 150 Qs"),
