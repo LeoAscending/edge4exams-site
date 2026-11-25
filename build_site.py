@@ -36,7 +36,7 @@ PAGES = [
                 "The most common mistake for each method",
                 "27 practice questions with a full answer key"],
         products=[("P6 Math Heuristics Pack: 27 Methods with Bar Models", "S$29", "p6-math-heuristics", None)],
-        maker=("Why I made this", "I'm a parent, not a teacher. I got through every exam up to university mostly by pattern recognition: I learned to see which kind of question it was, and which method solves it. This pack teaches your child to do the same. Each method comes with the clue words that tell you when to use it, so they're never staring at a question with no idea where to start."),
+        maker=("Why I made this", "I'm a parent, not a teacher. I noticed you can get through every exam by spotting which method a question needs. This pack teaches your child to do the same. Each method comes with the clue words that tell you when to use it, so they're never staring at a question with no idea where to start."),
         free=("Free sample: 3 PSLE Math methods with bar models", "free-psle-math-sample", "Not sure yet? Try 3 of the 27 methods first, each with a worked example, bar model and practice question. Free 4-page PDF."),
         faq=[("Are these real PSLE questions?", "No. Every question is original and uses the problem-solving heuristics taught in Singapore primary schools. We never use real or copied exam papers."),
              ("Who is it for?", "P6 students preparing for PSLE Math, and P5 students who are starting on word-problem heuristics."),
