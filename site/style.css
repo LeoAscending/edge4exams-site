@@ -27,6 +27,7 @@ nav a:hover{color:var(--gold)}
 .badges{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 26px}
 .badges li{border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 12px;font-size:14px;color:#eef8f8}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ask{margin:0 0 10px;font-weight:800;font-size:18px;color:var(--gold)}
 .fan{position:relative;height:340px}
 .fan .book{position:absolute;width:56%}
 .fan .b1{left:0;top:54px;transform:rotate(-9deg)}
@@ -38,6 +39,17 @@ nav a:hover{color:var(--gold)}
 .book::before{transform:translate(9px,9px)}
 .book::after{transform:translate(5px,5px)}
 .book img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+/* two doors */
+.doors{position:relative;margin-top:-52px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.door{border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px 24px 22px;display:flex;flex-direction:column;gap:6px}
+.door.d-psle{background:var(--cream)}
+.door.d-pro{background:var(--card)}
+.door .who{font-size:13px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-text)}
+.door h2{margin:0;font-size:clamp(24px,3vw,30px)}
+.door p{margin:0;color:var(--muted)}
+.door .facts{color:var(--ink);font-weight:700}
+.door .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:12px}
+.door .btn{margin-top:0}
 /* trust strip */
 .trust{position:relative;margin-top:-52px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
 .trust div{padding:18px 12px;border-left:1px solid var(--line)}
@@ -115,7 +127,7 @@ summary{font-weight:700;cursor:pointer}
 .fcols ul{list-style:none;padding:0;margin:0}
 .fcols li{margin:4px 0;font-size:15px}
 @media (max-width:860px){
- .hero .wrap,.phero .wrap,.cols,.fcols{grid-template-columns:1fr}
+ .hero .wrap,.phero .wrap,.cols,.fcols,.doors{grid-template-columns:1fr}
  .fan{height:250px;max-width:380px;width:100%;margin:6px auto 0}
  .trust{grid-template-columns:repeat(2,1fr)}
  .trust div:nth-child(3){border-left:0}

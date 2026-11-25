@@ -233,6 +233,7 @@ nav a:hover{color:var(--gold)}
 .badges{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 26px}
 .badges li{border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 12px;font-size:14px;color:#eef8f8}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ask{margin:0 0 10px;font-weight:800;font-size:18px;color:var(--gold)}
 .fan{position:relative;height:340px}
 .fan .book{position:absolute;width:56%}
 .fan .b1{left:0;top:54px;transform:rotate(-9deg)}
@@ -244,6 +245,17 @@ nav a:hover{color:var(--gold)}
 .book::before{transform:translate(9px,9px)}
 .book::after{transform:translate(5px,5px)}
 .book img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+/* two doors */
+.doors{position:relative;margin-top:-52px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.door{border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px 24px 22px;display:flex;flex-direction:column;gap:6px}
+.door.d-psle{background:var(--cream)}
+.door.d-pro{background:var(--card)}
+.door .who{font-size:13px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-text)}
+.door h2{margin:0;font-size:clamp(24px,3vw,30px)}
+.door p{margin:0;color:var(--muted)}
+.door .facts{color:var(--ink);font-weight:700}
+.door .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:12px}
+.door .btn{margin-top:0}
 /* trust strip */
 .trust{position:relative;margin-top:-52px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
 .trust div{padding:18px 12px;border-left:1px solid var(--line)}
@@ -321,7 +333,7 @@ summary{font-weight:700;cursor:pointer}
 .fcols ul{list-style:none;padding:0;margin:0}
 .fcols li{margin:4px 0;font-size:15px}
 @media (max-width:860px){
- .hero .wrap,.phero .wrap,.cols,.fcols{grid-template-columns:1fr}
+ .hero .wrap,.phero .wrap,.cols,.fcols,.doors{grid-template-columns:1fr}
  .fan{height:250px;max-width:380px;width:100%;margin:6px auto 0}
  .trust{grid-template-columns:repeat(2,1fr)}
  .trust div:nth-child(3){border-left:0}
@@ -351,7 +363,7 @@ def head(title, desc, canonical, jsonld, md=None, og="og-home.jpg", psle=False, 
         nav = f'<a href="/psle-math/">PSLE Math</a><a href="/psle-math/#inside">What\'s inside</a><a href="{g("p6-math-heuristics")}">Buy the pack</a>'
         chip = '<span class="chip">PSLE</span>'
     else:
-        nav = f'<a href="/#exams">Exams</a><a href="/#how">How it works</a><a href="{STORE}">Store</a>'
+        nav = f'<a href="/psle-math/">PSLE Math</a><a href="/#exams">Licensing exams</a><a href="{STORE}">Store</a>'
         chip = ""
     return f"""<!doctype html><html lang="en-SG"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -513,26 +525,37 @@ def exam_page(p):
     return "\n".join(body)
 
 def home_page():
-    home_desc = "Short notes, trap lists and full-length original mock exams for Singapore's CMFAS (M8, M9, RES5, HI and more), SCI, CEA RES and CAMS exams. Instant PDF download."
+    home_desc = ("Edge 4 Exams Singapore: short, exam-focused study packs for Singapore exams. PSLE Math for Primary 6 (27 methods with bar models), "
+                 "and notes, trap lists and full-length original mock exams for CMFAS (M8, M9, RES5, HI and more), SCI, CEA RES and CAMS. Instant PDF download.")
     site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "Edge 4 Exams Singapore", "alternateName": "Edge4Exams", "url": BASE + "/"}
     fan = ('<div class="fan" aria-hidden="true">' + book("res5", "res5-thumb.png", "", eager=True, cls="b1")
-           + book("bank-starter", "six-exam-bundle-thumb.png", "", eager=True, cls="b2") + book("m9", "m9-thumb.png", "", eager=True, cls="b3") + "</div>")
+           + book("p6-math-heuristics", None, "", eager=True, cls="b2") + book("m9", "m9-thumb.png", "", eager=True, cls="b3") + "</div>")
     hero = ('<section class="hero"><div class="wrap"><div>'
-            '<h1>Pass your licensing exam with less reading</h1>'
-            '<p class="lead">Short, exam-focused notes, trap lists and full-length original mock exams for Singapore\'s CMFAS, SCI, CEA and CAMS exams.</p>'
+            '<h1>Pass your exam with less reading</h1>'
+            '<p class="lead">Short, exam-focused study packs for Singapore exams: PSLE Math for primary school, and CMFAS, SCI, CEA and CAMS for professionals.</p>'
             '<ul class="badges"><li>Original questions only</li><li>Every answer explained</li><li>Instant PDF download</li></ul>'
-            f'<div class="cta"><a class="btn btn-gold" href="#exams">Choose your exam</a><a class="btn btn-ghost" href="{STORE}">Visit the store</a></div>'
+            '<p class="ask">Parent or professional?</p>'
+            '<div class="cta"><a class="btn btn-gold" href="/psle-math/">I\'m a parent</a><a class="btn btn-ghost" href="#exams">I\'m a professional</a></div>'
             f'</div>{fan}</div></section>')
-    body = [head("Edge 4 Exams Singapore | CMFAS, SCI, CEA and CAMS Exam Notes and Mock Exams", home_desc, BASE + "/", [ORG, site_ld], og="og-home.jpg", hero=hero),
-            '<div class="trust"><div><b>14</b><span>papers covered</span></div><div><b>1,000+</b><span>original practice questions</span></div>'
-            '<div><b>9 years</b><span>in the industry, by a former adviser</span></div><div><b>Instant</b><span>PDF on any device</span></div></div>',
-            '<h2 id="exams">Choose your exam</h2><p class="sub">Pick your paper to see what\'s inside each pack.</p>']
+    doors = ('<div class="doors">'
+             '<div class="door d-psle"><span class="who">Parent · Primary 6</span><h2>PSLE Math</h2>'
+             '<p>27 problem-solving methods, each with a fully worked example and a bar model drawn to the exact numbers.</p>'
+             '<p class="facts">S$29 · free 3-method sample</p>'
+             f'<div class="row"><a class="btn btn-gold" href="/psle-math/">See the PSLE pack</a><a class="btn btn-outline" href="{g("free-psle-math-sample")}">Free sample</a></div></div>'
+             '<div class="door d-pro"><span class="who">Professional</span><h2>Licensing exams</h2>'
+             '<p>CMFAS, SCI, CEA RES and CAMS: short notes, trap lists and full-length mock exams, written by a former financial adviser with 9 years in the industry.</p>'
+             '<p class="facts">14 papers · 1,000+ original practice questions</p>'
+             '<div class="row"><a class="btn" href="#exams">Choose your exam</a></div></div>'
+             '</div>')
+    body = [head("Edge 4 Exams Singapore | PSLE Math, CMFAS, SCI, CEA and CAMS Study Packs", home_desc, BASE + "/", [ORG, site_ld], og="og-home.jpg", hero=hero),
+            doors,
+            '<h2 id="exams">Licensing exams</h2><p class="sub">Pick your paper to see what\'s inside each pack.</p>']
     for gname, paths in PRO_GROUPS:
         body.append(f'<p class="group">{esc(gname)}</p><div class="exams">' + "".join(exam_card(x) for x in paths) + "</div>")
     body.append('<h2>Look inside</h2><p class="sub">Every pack has a trap list and shortcuts like these.</p><div class="peek">'
                 f'<figure><img src="{TEASER["cmfas-hi"][0]}" alt="{esc(TEASER["cmfas-hi"][1])}" width="720" height="720" loading="lazy" decoding="async"><figcaption>Trap lists: the wrong answers that look right, and the truth beside each one.</figcaption></figure>'
                 f'<figure><img src="{TEASER["cmfas-m9a"][0]}" alt="{esc(TEASER["cmfas-m9a"][1])}" width="720" height="720" loading="lazy" decoding="async"><figcaption>Shortcuts that stick, like this one from the M9A pack.</figcaption></figure></div>')
-    body.append("<h2>Popular packs</h2><p class=\"sub\">Checkout and instant download on Gumroad.</p>")
+    body.append("<h2>Popular licensing packs</h2><p class=\"sub\">Checkout and instant download on Gumroad.</p>")
     body.append(cards([("Bank Starter Pack: RES5, M8, M8A, M9, M9A, HI", "S$99", "bank-starter", "six-exam-bundle-thumb.png"),
                        ("CGI Complete Bundle: BCP + PGI + ComGI", "S$59", "cgi", "cgi-bundle-thumb.png"),
                        ("CEA RES Complete Bundle: Paper 1 + 2", "S$49", "res-cea", "cea-bundle-thumb.png"),
