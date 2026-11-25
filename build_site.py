@@ -184,6 +184,8 @@ COMMON_FAQ = [
 # Site sections. PSLE is kept separate from the professional licensing exams:
 # its own look (cream hero), its own nav, footer and About text.
 PSLE_PATHS = {"psle-math"}
+# Hand-built PSLE pages kept in static/ (copied into site/ as-is). Listed here so llms.txt, _headers and sitemap.xml include them.
+EXTRA_PSLE = [("math-island", "Math Island: free daily PSLE problem-sum game", "free browser game, 15 minutes a day of bar-model training (P5 and P6), no sign-up")]
 def is_psle(path): return path in PSLE_PATHS
 
 PRO_GROUPS = [("CMFAS insurance and financial advisory", ["cmfas-m8", "cmfas-m8a", "cmfas-m9", "cmfas-m9a", "cmfas-res5", "cmfas-hi"]),
@@ -362,7 +364,7 @@ def head(title, desc, canonical, jsonld, md=None, og="og-home.jpg", psle=False, 
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in jsonld)
     w, h = OG_SIZE.get(og, (1200, 675))
     if psle:
-        nav = f'<a href="/psle-math/">PSLE Math</a><a href="/psle-math/#inside">What\'s inside</a><a href="{g("p6-math-heuristics")}">Buy the pack</a>'
+        nav = f'<a href="/psle-math/">PSLE Math</a><a href="/psle-math/#inside">What\'s inside</a><a href="/math-island/">Free game</a><a href="{g("p6-math-heuristics")}">Buy the pack</a>'
         chip = '<span class="chip">PSLE</span>'
     else:
         nav = f'<a href="/psle-math/">PSLE Math</a><a href="/#exams">Licensing exams</a><a href="{STORE}">Store</a>'
@@ -487,6 +489,8 @@ def llms_txt():
         prices = ", ".join(f"{n} {pr}" for n, pr, s, i in p["products"])
         if p.get("free"): prices += f"; {p['free'][0]} free (S$0+), {g(p['free'][1])}"
         L.append(f"- [{p['title']}]({BASE}/{p['path']}.md): {prices}")
+    for path, title, blurb in EXTRA_PSLE:
+        L.append(f"- [{title}]({BASE}/{path}.md): {blurb}")
     L += ["", "## Store", "", f"- [Edge 4 Exams on Gumroad]({STORE}/): all packs, instant PDF download", "- Contact: edge4exams@proton.me", ""]
     return "\n".join(L)
 
@@ -597,9 +601,11 @@ def build():
            "/img/*", "  Cache-Control: public, max-age=604800", ""]
     for p in PAGES:
         hdr += [f"/{p['path']}.md", f'  Link: <{BASE}/{p["path"]}/>; rel="canonical"', ""]
+    for path, _, _ in EXTRA_PSLE:
+        hdr += [f"/{path}.md", f'  Link: <{BASE}/{path}/>; rel="canonical"', ""]
     write(OUT + "/_headers", "\n".join(hdr))
     write(OUT + "/robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
-    urls = [BASE + "/"] + [f"{BASE}/{p['path']}/" for p in PAGES]
+    urls = [BASE + "/"] + [f"{BASE}/{p['path']}/" for p in PAGES] + [f"{BASE}/{path}/" for path, _, _ in EXTRA_PSLE]
     write(OUT + "/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join(f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")
 
