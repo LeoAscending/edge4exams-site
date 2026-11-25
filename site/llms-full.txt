@@ -1,12 +1,11 @@
 # Edge 4 Exams Singapore
 
-> Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+> Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
-Each exam page has a plain Markdown copy (same content as the web page).
+Each page has a plain Markdown copy (same content as the web page).
 
-## Exam pages
+## Professional licensing exams
 
-- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29; Free sample: 3 PSLE Math methods with bar models free (S$0+), https://edge4examsg.gumroad.com/l/free-psle-math-sample
 - [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md): CMFAS M8 Complete Pack S$34, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md): CMFAS M8A Complete Pack S$29, CM-CIS Bundle: M8 + M8A S$49
 - [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md): CMFAS M9 Complete Pack S$34, CM-LIP Bundle: M9 + M9A S$45
@@ -18,10 +17,17 @@ Each exam page has a plain Markdown copy (same content as the web page).
 - [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md): CEA RES Complete Bundle: Paper 1 + 2 S$49, CEA RES Paper 1 Notes + 80-Question Mock S$29, CEA RES Paper 2 Notes + 80-Question Mock S$29
 - [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md): CAMS Exam Notes + 100-Question Practice Exam S$59
 
+- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, https://edge4examsg.gumroad.com/l/bank-starter
+
+## PSLE (primary school)
+
+Edge 4 Exams also makes PSLE Math material for Primary 6: problem-solving methods with worked examples and bar models. Checkout and instant PDF download on Gumroad. Independent study aid, not affiliated with MOE or SEAB. Every question is original.
+
+- [PSLE Math Heuristics Pack for P6: 27 Methods with Bar Models](https://edge4exams.pages.dev/psle-math.md): P6 Math Heuristics Pack: 27 Methods with Bar Models S$29; Free sample: 3 PSLE Math methods with bar models free (S$0+), https://edge4examsg.gumroad.com/l/free-psle-math-sample
+
 ## Store
 
 - [Edge 4 Exams on Gumroad](https://edge4examsg.gumroad.com/): all packs, instant PDF download
-- Bank Starter Pack (RES5, M8, M8A, M9, M9A, HI): S$99, https://edge4examsg.gumroad.com/l/bank-starter
 
 ---
 
@@ -71,9 +77,9 @@ One method a day for about four weeks: read the worked example together, cover t
 
 Checkout is on Gumroad. You get an instant PDF download you can print or use on a tablet.
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams also makes PSLE Math material for Primary 6: problem-solving methods with worked examples and bar models. Checkout and instant PDF download on Gumroad. Independent study aid, not affiliated with MOE or SEAB. Every question is original.
 
 
 ---
@@ -133,9 +139,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -195,9 +201,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md)
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -253,9 +259,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 - [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -315,9 +321,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 - [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -376,9 +382,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
 - [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -435,9 +441,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 - [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -494,9 +500,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
 - [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -552,9 +558,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 - [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -613,9 +619,9 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
 
 
 ---
@@ -668,6 +674,6 @@ A former financial adviser with 9 years in the Singapore industry.
 - [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
 - [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
 
-## About Edge 4 Exams
+## About
 
-Edge 4 Exams Singapore (also written Edge4Exams) makes original study notes, worked methods and full-length mock exams for Singapore exams: PSLE Math, and the CMFAS, SCI, CEA RES and CAMS licensing exams. The licensing exam packs are written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with MOE, SEAB, SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.
+Edge 4 Exams Singapore (also written Edge4Exams) makes short notes, trap lists and full-length original mock exams for Singapore licensing exams: CMFAS, SCI, CEA RES and CAMS. Written by a former financial adviser with 9 years in the Singapore industry. Checkout and instant PDF downloads are on Gumroad: https://edge4examsg.gumroad.com/ . Independent study aids, not affiliated with SCI, IBF, MAS, CEA or ACAMS. Every question is original; no leaked or real exam questions.

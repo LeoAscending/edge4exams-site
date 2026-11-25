@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" font-family="Inter,Helvetica,Arial,sans-serif" role="img" aria-label="Bar model: Ali has 3 units, Ben has 1 unit and 24 dollars more, together 360 dollars">
+  <text x="0" y="62" font-size="26" font-weight="700" fill="#0f2a2a">Ali</text>
+  <rect x="80" y="36" width="270" height="40" rx="4" fill="#0f6e6e"/>
+  <line x1="170" y1="36" x2="170" y2="76" stroke="#fff" stroke-width="3"/>
+  <line x1="260" y1="36" x2="260" y2="76" stroke="#fff" stroke-width="3"/>
+  <text x="0" y="146" font-size="26" font-weight="700" fill="#0f2a2a">Ben</text>
+  <rect x="80" y="120" width="90" height="40" rx="4" fill="#f5c542" stroke="#c99a12" stroke-width="3"/>
+  <rect x="170" y="120" width="70" height="40" rx="4" fill="#fff" stroke="#c99a12" stroke-width="3" stroke-dasharray="7 6"/>
+  <text x="205" y="147" font-size="20" font-weight="800" fill="#9a6f00" text-anchor="middle">$24</text>
+  <path d="M376 36 q16 0 16 16 v38 q0 16 16 16 q-16 0 -16 16 v38 q0 16 -16 16" fill="none" stroke="#0f2a2a" stroke-width="3"/>
+  <text x="418" y="114" font-size="28" font-weight="800" fill="#0f2a2a">$360</text>
+  <text x="0" y="226" font-size="26" font-weight="700" fill="#33504f">How much does Ben have?</text>
+</svg>
