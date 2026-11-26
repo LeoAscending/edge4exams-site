@@ -1,6 +1,6 @@
 # CMFAS HI (Health Insurance) exam notes (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-hi/
+Web page: https://edge4exams.com/cmfas-hi/
 
 The HI paper covers health insurance in Singapore. These notes were written by a former adviser who specialised in critical illness planning for 9 years, and are split into two parts so you can study one topic block at a time.
 
@@ -46,9 +46,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.com/sci-cgi.md)
 
 ## About
 

@@ -1,6 +1,6 @@
 # CAMS exam notes and practice exam (2026)
 
-Web page: https://edge4exams.pages.dev/cams-exam/
+Web page: https://edge4exams.com/cams-exam/
 
 CAMS is the anti-money laundering certification awarded by ACAMS. This pack condenses the material into short notes and gives you 100 original exam-style questions to practise on.
 
@@ -42,9 +42,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.com/cmfas-res1b-cm-eip.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.com/cea-res-exam.md)
 
 ## About
 

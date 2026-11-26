@@ -1,6 +1,6 @@
 # CMFAS RES1B and CM-EIP exam notes and mock exams (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-res1b-cm-eip/
+Web page: https://edge4exams.com/cmfas-res1b-cm-eip/
 
 To deal in securities at a non-exchange member firm you need RES1B and CM-EIP. RES1B is 60 questions and needs 75%, so you can miss only 15. CM-EIP is 90 questions in 2.5 hours, and you need 63 right.
 
@@ -46,9 +46,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
-- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9.md)
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.com/cams-exam.md)
 
 ## About
 

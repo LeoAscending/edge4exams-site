@@ -2,7 +2,7 @@
 
 Math Island is a free browser game by Edge 4 Exams Singapore that trains PSLE Math problem sums in 15 minutes a day. Your child builds the bar model, finds 1 unit, then answers. Every correct, quick answer earns shells, and shells hatch island pals.
 
-Play: https://edge4exams.pages.dev/math-island/ (free, no sign-up, works on phones, tablets and computers)
+Play: https://edge4exams.com/math-island/ (free, no sign-up, works on phones, tablets and computers)
 
 ## World 1: Bar Bridge
 

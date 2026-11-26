@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the Edge 4 Exams hub site (edge4exams.pages.dev) into ./site/.
+"""Builds the Edge 4 Exams hub site (edge4exams.com) into ./site/.
 
 Run: python3 build_site.py   (standard library only, no installs needed)
 Everything in ./static/ is copied into the site as-is (images, extra files).
@@ -7,7 +7,7 @@ The GitHub Action runs this on every push to main and deploys ./site/ to Cloudfl
 """
 import json, os, shutil, html
 
-BASE = "https://edge4exams.pages.dev"
+BASE = "https://edge4exams.com"
 STORE = "https://edge4examsg.gumroad.com"
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "site")
