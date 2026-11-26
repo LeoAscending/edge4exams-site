@@ -1,6 +1,6 @@
 # CMFAS RES5 exam notes and mock exam (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-res5/
+Web page: https://edge4exams.com/cmfas-res5/
 
 RES5 (Rules and Regulations for Financial Advisory Services) is one of the toughest CMFAS papers. You need 75% on Part I and 80% on Part II in the same sitting, or you resit everything. There are no calculation questions.
 
@@ -48,9 +48,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
-- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
-- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.pages.dev/cmfas-res1b-cm-eip.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.com/cmfas-hi.md)
+- [CMFAS RES1B and CM-EIP Notes and Mock Exams (2026)](https://edge4exams.com/cmfas-res1b-cm-eip.md)
 
 ## About
 

@@ -1,6 +1,6 @@
 # CMFAS M8A exam notes and mock exam (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-m8a/
+Web page: https://edge4exams.com/cmfas-m8a/
 
 M8A is the paper for funds that use derivatives and structured payoffs: 50 questions in 1 hour, and you need 70%. Options, CPPI and leveraged ETFs are where most marks are lost.
 
@@ -49,9 +49,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8.md)
-- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CMFAS M8 Notes and 50-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m8.md)
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9a.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
 
 ## About
 

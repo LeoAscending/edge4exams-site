@@ -1,6 +1,6 @@
 # CMFAS M9 exam notes and mock exam (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-m9/
+Web page: https://edge4exams.com/cmfas-m9/
 
 M9 (Life Insurance and Investment-Linked Policies) is the paper every life insurance adviser in Singapore must pass: 100 questions in 2 hours, and you need 70%. The ILP calculations chapter is where many candidates lose marks.
 
@@ -45,9 +45,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9a.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+- [CMFAS M9A Notes and 50-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9a.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.com/cmfas-hi.md)
 
 ## About
 

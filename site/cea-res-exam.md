@@ -1,6 +1,6 @@
 # CEA RES exam notes and mock exams: Paper 1 and Paper 2
 
-Web page: https://edge4exams.pages.dev/cea-res-exam/
+Web page: https://edge4exams.com/cea-res-exam/
 
 The Real Estate Salesperson (RES) exam has two papers. Paper 1 is the law paper and Paper 2 is the practical paper. Each mock follows the real format: 60 Section A questions plus 2 case studies with 20 double-mark questions, and you need 60 out of 100.
 
@@ -48,9 +48,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.pages.dev/sci-cgi.md)
-- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.pages.dev/cams-exam.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [SCI BCP, PGI and ComGI Notes and Mock Exams (2026)](https://edge4exams.com/sci-cgi.md)
+- [CAMS Exam Notes and 100-Question Practice Exam (2026)](https://edge4exams.com/cams-exam.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
 
 ## About
 

@@ -1,6 +1,6 @@
 # SCI CGI exam notes and mock exams: BCP, PGI and ComGI (2026)
 
-Web page: https://edge4exams.pages.dev/sci-cgi/
+Web page: https://edge4exams.com/sci-cgi/
 
 The SCI Certificate in General Insurance (CGI) is made up of three papers: BCP (Basic Insurance Concepts and Principles), PGI (Personal General Insurance) and ComGI (Commercial General Insurance). BCP is 40 questions in 45 minutes, closed book.
 
@@ -45,9 +45,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.pages.dev/cea-res-exam.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.com/cmfas-hi.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [CEA RES Exam Notes and Mock Exams, Paper 1 and Paper 2 (2027 Syllabus)](https://edge4exams.com/cea-res-exam.md)
 
 ## About
 

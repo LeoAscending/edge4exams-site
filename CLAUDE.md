@@ -1,4 +1,4 @@
-# Edge 4 Exams hub site (edge4exams.pages.dev)
+# Edge 4 Exams hub site (edge4exams.com, also served at edge4exams.pages.dev)
 
 Read this before changing anything. More than one Claude agent works in this repo.
 
@@ -6,6 +6,8 @@ Read this before changing anything. More than one Claude agent works in this rep
 - **`site/` is the live site.** Whatever is committed in `site/` is deployed exactly as-is. Put finished HTML, CSS, images and other files there.
 - Deploy: `.github/workflows/deploy.yml`. On a pull request it only checks that `index.html`, `robots.txt`, `sitemap.xml`, `llms.txt`, the Google verification file and at least one `.md` copy exist in `site/`. On every push to `main` it runs the same check, then deploys `site/` to the existing Cloudflare Pages project `edge4exams` with Wrangler (a Direct Upload project, so Cloudflare's Git integration is not used). If the check fails, nothing is deployed. Secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set by the owner in GitHub.
 - `build_site.py` is the generator that produced the original exam pages, the Markdown copies, `llms.txt`, `llms-full.txt` and `_headers` (`python3 build_site.py` writes into `site/`, standard library only, and copies `static/` in first if it exists). If you redesign pages by hand instead, make sure the files below still exist and that each `.md` copy and `llms.txt` match the new page content and prices. Do not run `build_site.py` over a hand-built `site/` without checking the diff, because it rewrites every page it knows about.
+
+- **Domain:** the canonical address is https://edge4exams.com (bought 26 Nov 2026 in the same Cloudflare account and attached to the Pages project). Every canonical URL, sitemap entry, `llms.txt` link and `_headers` Link uses edge4exams.com. edge4exams.pages.dev should 301 to it via a Cloudflare Bulk Redirect set in the dashboard (not in this repo).
 
 ## Site structure
 - **The home page is for both audiences** (owner's decision, 25 Nov 2026): a neutral hero, then two doors, PSLE Math (parents) and Licensing exams (professionals). Below the doors the home page lists the licensing exams. The professional nav links to PSLE Math.

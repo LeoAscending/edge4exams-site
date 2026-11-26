@@ -1,6 +1,6 @@
 # PSLE Math heuristics pack for P6 (27 methods)
 
-Web page: https://edge4exams.pages.dev/psle-math/
+Web page: https://edge4exams.com/psle-math/
 
 Most PSLE Math word problems can be solved with one of 27 methods. This pack teaches each one with a fully worked example and a bar model drawn to the exact numbers, then gives your child a practice question to try alone.
 

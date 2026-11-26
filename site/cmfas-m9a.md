@@ -1,6 +1,6 @@
 # CMFAS M9A exam notes and mock exam (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-m9a/
+Web page: https://edge4exams.com/cmfas-m9a/
 
 M9A is the paper you need to advise on structured investment-linked policies: 50 questions in 1 hour, and you need 70%. Options, futures and "capital protected vs capital guaranteed" catch out a lot of candidates.
 
@@ -49,9 +49,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
-- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.pages.dev/cmfas-hi.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
+- [CMFAS HI Health Insurance Exam Notes and Questions (2026)](https://edge4exams.com/cmfas-hi.md)
 
 ## About
 

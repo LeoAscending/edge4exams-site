@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edge4exams.pages.dev/sitemap.xml
+Sitemap: https://edge4exams.com/sitemap.xml

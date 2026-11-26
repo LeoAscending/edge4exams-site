@@ -1,6 +1,6 @@
 # CMFAS M8 exam notes and mock exam (2026)
 
-Web page: https://edge4exams.pages.dev/cmfas-m8/
+Web page: https://edge4exams.com/cmfas-m8/
 
 M8 is the paper you need to advise on unit trusts and other collective investment schemes: 50 questions in 1 hour, and you need 70%. Fund parties, authorised vs recognised schemes and sales-charge sums catch out a lot of candidates.
 
@@ -49,9 +49,9 @@ A former financial adviser with 9 years in the Singapore industry.
 
 ## Other exams
 
-- [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m8a.md)
-- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-m9.md)
-- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.pages.dev/cmfas-res5.md)
+- [CMFAS M8A Notes and 50-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m8a.md)
+- [CMFAS M9 Notes and 100-Question Mock Exam (2026)](https://edge4exams.com/cmfas-m9.md)
+- [CMFAS RES5 Notes and 150-Question Mock Exam (2026)](https://edge4exams.com/cmfas-res5.md)
 
 ## About
 
